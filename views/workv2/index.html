@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0 "/>
+    <title>晒“最温馨全家福”赢迪士尼乐园家庭套票</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div data-role="page" id="voteHomepage" data-theme="f" >
+    <div data-role="header" class="vote-header ">
+        <img src="images/vote-banner.png"/>
+    </div>
+
+    <div data-role="main" class="ui-content ui-body-f">
+        <!--参与统计等-->
+        <div class="ui-grid-b vote-info">
+            <div class="ui-block-a vote-info-item">
+                <span class="vote-info-desc" >参加人数</span><br/>
+                <span class="vote-info-num vote-my-ranking">256</span>
+            </div>
+            <div class="ui-block-b vote-info-item">
+                <span class="vote-info-desc">投票人次</span><br/>
+                <span class="vote-info-num vote-voting-num">586</span>
+            </div>
+            <div class="ui-block-c vote-info-item">
+                <span  class="vote-info-desc">我的排行</span><br/>
+                <span class="vote-info-num vote-my-ranking">6</span>
+            </div>
+        </div>
+        <div>
+            <!--活动倒计时-->
+            <div class="ui-grid-solo vote-time">
+                <div class="ui-block-a ">
+                    <span>距离活动结束还有: <em class="vote-deadline">6</em>天<em class="vote-deadline">12</em>小时<em
+                            class="vote-deadline">34</em>分<em class="vote-deadline">33</em>秒</span>
+                </div>
+            </div>
+            <!--我要参加-->
+            <div class="vote-join">
+                <div class="vote-join-container">
+                    <a href="#join" data-rel="popup"  class="ui-btn">我要参加</a>
+                    <div data-role="popup" id="join" class="ui-content" data-overlay-theme="b">
+                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete
+                         ui-btn-icon-notext ui-btn-right">Close</a>
+                        <div class="registerinfotitle">
+                            <h1>注册报名</h1>
+                            <p>(一个微信号只能报名一次)</p>
+                        </div>
+                        <div class="registerinfo">
+                            <div class="registername">
+                                <span>姓名:</span><input type="text" />
+                            </div>
+                            <div class="registersex">
+                                <span>性别:</span>
+                                <input type="radio" name="sex" value="male">男
+                                <input type="radio" name="sex" value="female">女
+                            </div>
+                            <div class="registerphone">
+                                <span>手机:</span><input type="number" />
+                            </div>
+                            <div class="validcode">
+                                <input type="tel" id="valid">
+                                <a href="#" class="ui-btn" id="sendVerifyCode" class="getvalcode">发送验证码</a>
+                            </div>
+                        </div>
+                        <div class="activityPhoto">
+                            <p>
+                                参赛照片<span>(至少1张，最多3张)</span>
+                            </p>
+                            <img src="images/vote-uploadPhoto.png"/>
+                        </div>
+                        <div class="vote-profile-words">
+                            <p>参赛宣言：</p>
+                            <div>
+                                <p>我是二狗狗 很高兴参加这个活动。参加这个活动让我很快了，很幸福。么么哒</p>
+                            </div>
+                        </div>
+                        <div class="submitInfo">
+                            <a href="#" class="ui-btn">提交报名</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--搜索-->
+            <div class="vote-search">
+                <input type="search" placeholder="输入参赛者姓名或者编号进行投票" style="">
+                <button class="vote-search-btn">搜索</button>
+            </div>
+            <!--照片展示标题-->
+            <div class="ui-grid-b vote-photo">
+                <div class="ui-block-a ">
+                    <a href="#hotphoto" class="ui-btn active">最热</a><br>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#rankingphoto" class="ui-btn">排行</a><br>
+                </div>
+                <div class="ui-block-c">
+                    <a href="#newphoto" class="ui-btn">最新</a><br>
+                </div>
+            </div>
+            <!--照片展示列表-->
+            <div class="vote-photos">
+                <!--最热-->
+                <div id="hotphoto">
+                    <ul class="ui-grid-a">
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ui-content vote-clickkmore">
+                        <a href="#" class="ui-btn">点击加载更多</a>
+                        <img src="images/vote-morephotos.png"/>
+                    </div>
+                </div>
+                <!--排行-->
+                <div id="rankingphoto" style="display: none">
+                    <ul class="ui-grid-a">
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ui-content vote-clickkmore">
+                        <a href="#" class="ui-btn">点击加载更多</a>
+                        <img src="images/vote-morephotos.png"/>
+                    </div>
+                </div>
+                <!--最新-->
+                <div id="newphoto" style="display: none">
+                    <ul class="ui-grid-a">
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-a">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-block-b">
+                            <div class="vote-userphoto">
+                                <div class="vote-num">
+                                    <div class="vote-usernum">
+                                        <span>26</span>
+                                        <span>号</span>
+                                    </div>
+                                    <img src="images/vote-familyphoto01.png"/>
+                                </div>
+                                <div class="vote-userphotodesc">
+                                    <div class="vote-photo-left">
+                                        <p class="vote-username">二狗</p>
+
+                                        <p><span>8</span>票</p>
+                                    </div>
+                                    <div class="vote-photo-right">
+                                        <a href="#">
+                                            <img src="images/vote-zanHand.png"/>
+                                            <span>投票</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ui-content vote-clickkmore">
+                        <a href="#" class="ui-btn">点击加载更多</a>
+                        <img src="images/vote-morephotos.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--活动奖品-->
+        <div class="vote-prize">
+            <div class="vote-prize-wraper">
+                <div class="lline"></div>
+                <div class="content">活动奖品</div>
+                <div class="rline"></div>
+            </div>
+        </div>
+        <div class="vote-prize-detail ui-grid-solo">
+            <div class="ui-block-a">
+                <div class="vote-prize-detail-img ">
+                    <div class="ui-grid-c">
+                        <div class="ui-block-a">
+                            <img src="images/vote-prize01.png"/><br>
+                            <span>一等奖</span>
+                        </div>
+                        <div class="ui-block-b">
+                            <img src="images/vote-prize02.png"/><br>
+                            <span>二等奖</span>
+                        </div>
+                        <div class="ui-block-c">
+                            <img src="images/vote-prize03.png"/><br>
+                            <span>三等奖</span>
+                        </div>
+                        <div class="ui-block-d">
+                            <img src="images/vote-prize04.png"/><br>
+                            <span>参与奖</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="vote-prize-detail-desc">
+                    <p>第1~2名：一等奖迪士尼家庭套票<span>(2张成人票1张儿童票)</span></p>
+
+                    <p>第3~7名：二等奖精致儿童写真(家庭全家福写真)一套</p>
+
+                    <p>第8~27名：三等奖品牌儿童安全座椅使用权</p>
+
+                    <p>第28~57名：参与奖哈根达斯<span>50元</span>抵价券</p>
+                </div>
+            </div>
+        </div>
+        <!--活动规则-->
+        <div class="vote-prize vote-rules">
+            <div class="vote-prize-wraper">
+                <div class="lline"></div>
+                <div class="content">活动规则</div>
+                <div class="rline"></div>
+            </div>
+        </div>
+        <div class="vote-rule-detail ui-grid-solo">
+            <div class="ui-block-a vote-prize-rule-desc">
+                <p>1、参赛者打开活动页面报名，填写信息(注册来呗账号)</p>
+
+                <p>2、分享参赛页面给自己好友拉票，好友关注'来呗妈妈'即可参与投票</p>
+
+                <p>3、每个微信号每天可为3人各投1票</p>
+
+                <p>4、发现刷票行为取消参赛资格</p>
+
+                <p>5、票数相同时按照报名时间先后排序</p>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="ui-grid-c vote-fix-nav">
+            <div class="ui-block-a">
+
+                <a href="#">
+                    <div><img src="images/vote-homepage.png"/></div>
+                    <span>投票首页</span>
+                </a>
+            </div>
+            <div class="ui-block-b">
+
+                <a href="#">
+                    <div><img src="images/vote-ranking.png"/></div>
+                    <span>排行榜</span>
+                </a>
+            </div>
+            <div class="ui-block-c">
+
+                <a href="#">
+                    <div> <img src="images/vote-desc.png"/></div>
+                    <span>赛事说明</span>
+                </a>
+            </div>
+            <div class="ui-block-d">
+                <a href="#">
+                    <div><img src="images/vote-profile.png"/></div>
+                    <span>个人中心</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script>
+    $(function () {
+        $(".vote-photo>div a").click(function () {
+            $(this).addClass("active");
+            $(this).parent().siblings().children("a").removeClass('active');
+            var $item = $(this).attr("href");
+            $($item).css("display", "block");
+            $($item).siblings().hide();
+        })
+    })
+</script>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = (clientWidth / 75) * 3.5 + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+        $.mobile.silentScroll(100);
+
+    })(document, window);
+</script>
+</body>
+</html>

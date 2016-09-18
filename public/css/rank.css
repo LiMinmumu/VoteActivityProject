@@ -1,0 +1,123 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,
+fieldset,legend,input,button,textarea,p,th,td
+{ margin:0; padding:0; }
+p,span,a{
+    text-shadow: none !important;
+}
+body{
+    min-height: 500px;
+}
+.ui-body-f {
+    color: white;
+    background-color: #55a5ef;
+}
+ .vote-rank, .vote-ranklist{
+    padding: 0;
+}
+.vote-ranklist{
+    min-height: 30rem;
+    margin-bottom: 8rem;
+}
+#rank{
+    width: 100%;
+    text-align: center;
+    border-collapse:collapse;
+    margin-top: 30px;
+}
+#rank tr{
+    border-bottom:1px solid #fff !important;
+}
+
+.vote-ranklist table thead{
+    color: #1b5b97;
+    font-size: .7rem;
+}
+table, td, th {
+    border-bottom: 1px solid #fff;
+}
+#rank tbody td{
+    height: 1.2rem;
+    padding: 2px 0;
+    font-size: .6rem;
+    font-weight:600;
+}
+
+.voteNum,.voteNums{
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: .5rem;
+    line-height: 1rem;
+    background-color: #f56969;
+}
+.voteNums{
+    color:#f56969;
+    background-color: #fff;
+}
+.vote-tic{
+    color: #d3f10b;    padding: 2px 0;
+}
+
+/*点击加载更多*/
+.vote-clickkmore{
+    width: 60%;
+    margin: 30px auto;
+    position: relative;
+}
+.vote-clickkmore a{
+    width: 10rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #fff;
+    color: #55a5ef;
+    font-size: .8rem;
+    margin: 0;
+    padding: 10px;
+    border-radius: 40px;
+}
+.vote-clickkmore img{       /*pad*/
+    position: absolute;
+    left: 61%;
+    top: 1.4rem;
+    width: 5%;
+}
+
+@media only screen and (max-width: 320px) {  /*4和5*/
+    .vote-clickkmore img{
+        left: 64%;
+        top: 1.8rem;
+    }
+}
+@media only screen and (max-width: 414px) and (min-width:375px)  { /*6和6p*/
+    .vote-clickkmore img{
+        left: 63%;
+        top: 1.7rem;
+    }
+}
+/*底部*/
+.vote-fix-nav{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    background-color:#f56969;
+    text-align: center;
+}
+.vote-fix-nav img{
+    height:1rem;
+    width:1rem;
+}
+.vote-fix-nav div div{
+    height: 1rem;
+    margin: .3rem auto 4px auto;
+}
+.vote-fix-nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
+    display: inline-block;
+    padding-bottom: .3rem;
+}
+.vote-fix-nav span{
+    color:#fff !important;
+}

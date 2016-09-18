@@ -1,0 +1,199 @@
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,
+fieldset,legend,input,button,textarea,p,th,td
+{ margin:0; padding:0; }
+p,span,a{
+    text-shadow: none !important;
+}
+body{
+    min-height: 500px;
+}
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉高亮效果*/
+}
+.ui-body-f {
+    color: white;
+    background-color: #55a5ef;
+}
+.vote-profile-user{
+    width: 70%;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    background: #ddedfc;
+    border-radius: 1rem;
+    margin: 0 auto;
+    color: #55a5ef;
+    font-size: .8rem;
+    font-weight: 600;
+}
+.vote-profile-user p, .vote-profile-user div{
+    display:inline-block;
+}
+.empty{
+    border-left: solid 1px #55a5ef;
+    height: .7rem;
+}
+.vote-profile-user span{
+    color:#f56969;
+}
+
+.vote-profile-desc{
+    border-radius: 20px;
+    color: #fff;
+    padding: 25px 35px;
+    margin-bottom: 45px;
+    border: solid 1px #fff;
+    font-weight: 600;
+}
+.vote-profile-rank{
+    margin: 20px auto;
+    width: 100%;
+    height: 3rem;
+}
+.vote-profile-rank>div{
+    display: inline-block;
+}
+.vote-profile{
+    padding: 0 20px;
+    font-size: .6rem;
+}
+.vote-profile-ticket,.vote-profile-num {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: solid 1px #fff;
+    line-height: .8rem;
+    font-size: .5rem;
+    text-align: center;
+}
+.vote-profile-ticket{
+    margin-left:1rem;
+}
+.vote-profile-num{
+    float: right;
+    margin-right:1rem;
+}
+.vote-profile-ticket p,.vote-profile-num p{
+    position: absolute;
+    left: .35rem;
+    top: 0.7rem;
+    font-size: .6rem;
+}
+
+.vote-profile-ticket span,.vote-profile-num span{
+    font-size: 1rem;
+    color: #d3f10b;
+}
+.current{
+    position: absolute;
+    left: .32rem !important;
+    top: 1.5rem !important;
+}
+.vote-ticket-desc{
+    text-align: center;
+    color:#175085;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.vote-ticket-desc p{
+    font-size:.68rem;
+}
+.vote-profile-words h1{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.vote-profile-words div{
+    border:solid 1px #fff;
+    padding: 10px 15px;
+    border-radius:10px;
+    min-height: 30px;
+    text-overflow: ellipsis;
+}
+.vote-photo{
+    margin: 1.3rem auto;
+}
+.vote-photo img{
+    width:100%;
+}
+.vote-btn{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.vote-btn a{
+    height: 1rem;
+    width: 35%;
+    padding: 6px;
+    margin:0;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    line-height: 1rem;
+    font-size: 0.7rem;
+}
+.vote-btn a:nth-of-type(odd){
+    background: #dc6d6d;
+}
+.vote-btn a:nth-of-type(even){
+    background: #52c546;
+    /*margin-left:20px;*/
+}
+
+
+/*弹出层样式*/
+#votePopup,#joinPopup{
+    width: 100%;
+    height: 12rem;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    border: solid 1px #fff;
+    box-shadow: none;
+}
+#votePopup p,#joinPopup p{
+    font-size: .65rem;
+    font-weight: 600;
+}
+#votePopup img,#joinPopup img{
+    width: 80%;
+    height: auto!important;
+}
+#votePopup-popup, #joinPopup-popup{
+    width: 55%;
+    max-width: 345px;
+    top: 35%!important;
+    left: 4rem !important;
+}
+/*底部*/
+.vote-fix-nav{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    background-color:#f56969;
+    text-align: center;
+}
+.vote-fix-nav img{
+    height:1rem;
+    width:1rem;
+}
+.vote-fix-nav div div{
+    height: 1rem;
+    margin: .3rem auto 4px auto;
+}
+.vote-fix-nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
+    display: inline-block;
+    padding-bottom: .3rem;
+}
+.vote-fix-nav span{
+    color:#fff !important;
+}
