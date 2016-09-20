@@ -7,26 +7,28 @@
     <title>晒“最温馨全家福”赢迪士尼乐园家庭套票</title>
     <link rel="stylesheet" href="/css/jquery.mobile-1.4.5.min.css"/>
     <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
-<body>
-<div data-role="page" id="voteHomepage" data-theme="f" >
-    <div data-role="header" class="vote-header ">
+<body id="body">
+<div data-role="page" id="voteHomepage" data-theme="f"  >
+    <div data-role="header" class="vote-header" id="header" >
         <img src="/images/vote-banner.png"/>
     </div>
 
-    <div data-role="main" class="ui-content ui-body-f">
+    <div data-role="main" class="ui-content ui-body-f" id="main">
         <!--参与统计等-->
         <div class="ui-grid-b vote-info">
             <div class="ui-block-a vote-info-item">
-                <span vote-info-desc>参加人数</span><br/>
+                <span class="vote-info-desc">参加人数</span><br/>
                 <span class="vote-info-num vote-my-ranking">256</span>
             </div>
             <div class="ui-block-b vote-info-item">
-                <span vote-info-desc>投票人次</span><br/>
+                <span class="vote-info-desc">投票人次</span><br/>
                 <span class="vote-info-num vote-voting-num">586</span>
             </div>
             <div class="ui-block-c vote-info-item">
-                <span vote-info-desc>我的排行</span><br/>
+                <span class="vote-info-desc">我的排行</span><br/>
                 <span class="vote-info-num vote-my-ranking">6</span>
             </div>
         </div>
@@ -41,10 +43,16 @@
             <!--我要参加-->
             <div class="vote-join">
                 <div class="vote-join-container">
-                    <a href="#join" data-rel="popup"  class="ui-btn">我要参加</a>
-                    <div data-role="popup" id="join" class="ui-content" data-overlay-theme="b">
-                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete
-                         ui-btn-icon-notext ui-btn-right">Close</a>
+                    <!--投票二维码弹出层-->
+                    <a href="#votePopup" data-rel="popup"  class="ui-btn" id="qrcode">我要参加</a>
+                    <!--参加二维码弹出层-->
+                    <a href="#joinPopup" data-rel="popup"  class="ui-btn" id="qrcode2"  style="display: none"></a>
+                    <!--表单提交弹出层-->
+                     <a href="#join" data-rel="popup"  class="ui-btn" id="joinBtn" style="display: none"></a>
+                    <!--表单提交弹层-->
+                    <div data-role="popup" id="join" class="ui-content popcontainer" data-overlay-theme="b">
+                        <a href="#pageone"  class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete
+                         ui-btn-icon-notext ui-btn-right" id="closeBtn1">Close</a>
                         <div class="registerinfotitle">
                             <h1>注册报名</h1>
                             <p>(一个微信号只能报名一次)</p>
@@ -74,18 +82,53 @@
                         </div>
                         <div class="vote-profile-words">
                             <p>参赛宣言：</p>
-                            <div>
-                                <p>我是二狗狗 很高兴参加这个活动。参加这个活动让我很快了，很幸福。么么哒</p>
-                            </div>
+                            <textarea style="">我是二狗狗 很高兴参加这个活动。参加这个活动让我很快了，很幸福。么么哒</textarea>
                         </div>
                         <div class="submitInfo">
                             <a href="#" class="ui-btn">提交报名</a>
                         </div>
                     </div>
+                    <script>
+                            $(function(){
+                             submitPopup("join","joinBtn");                       //打开 表单提交弹出层
+                             closeSubmitBtn("join","joinBtn","closeBtn1");         //关闭 表单提交弹出层
+                            //   submitPopup("votePopup","qrcode");               //打开 投票二维码弹出层
+                            //   closeSubmitBtn("votePopup","qrcode","closeBtn2");  //关闭 投票二维码弹出层
+                              //submitPopup("joinPopup","qrcode");                    //打开 参加二维码弹出层
+                              //  closeSubmitBtn("joinPopup","qrcode2","closeBtn3");//关闭 参加二维码弹出层
+
+                            })
+                                submitPopup=function(btnHref,btnId,func){  //打开 弹出层
+                                    var outerLayer= "#"+btnHref+"-screen";
+                                    var innerLayer="#"+btnHref+"-popup";
+                                    $("#header").css("-webkit-filter","blur(3px)");
+                                    $("#main").css("-webkit-filter","blur(3px)");
+                                    $("#"+btnId).addClass("ui-btn-active").attr("aria-expanded","true");
+                                    $(outerLayer).removeClass("ui-screen-hidden").addClass("ui-popup-screen").css("opacity",".5");
+                                    $(innerLayer).removeClass("ui-popup-hidden ui-popup-truncate").addClass("ui-popup-active").css({"max-width":"21rem","top": "0","left":"1rem"});
+                                     $("#main").css("max-height","28rem")
+
+                                },
+                               closeSubmitBtn =function(btnHref,btnId,closeId,func){  //关闭 弹出层
+                                    var outerLayer= "#"+btnHref+"-screen";
+                                    var innerLayer="#"+btnHref+"-popup";
+                                    $("#"+closeId).click(function(){
+                                        $("#header").css("-webkit-filter","blur(0)");
+                                        $("#main").css("-webkit-filter","blur(0)");
+                                        $("#"+btnId).removeClass("ui-btn-active").attr("aria-expanded","false");
+                                        $(outerLayer).addClass("ui-screen-hidden").removeClass("ui-popup-screen").css("opacity","0");
+                                        $(innerLayer).addClass("ui-popup-hidden ui-popup-truncate").removeClass("ui-popup-active").css({"max-width":"0","top": "0","left":"0"});
+                                        $("#main").css("height","auto")
+                                    })
+                                }
+
+
+                    </script>
                 </div>
             </div>
             <!--搜索-->
             <div class="vote-search">
+                <img src="/images/vote-searchicon.png" />
                 <input type="search" placeholder="输入参赛者姓名或者编号进行投票" style="">
                 <button class="vote-search-btn">搜索</button>
             </div>
@@ -300,8 +343,8 @@
                         </li>
                     </ul>
                     <div class="ui-content vote-clickkmore">
-                        <a href="#" class="ui-btn">点击加载更多</a>
-                        <img src="/images/vote-morephotos.png"/>
+                        <a href="#">
+                            <img src="/images/vote-clickmore.png"/></a>
                     </div>
                 </div>
                 <!--排行-->
@@ -501,8 +544,8 @@
                         </li>
                     </ul>
                     <div class="ui-content vote-clickkmore">
-                        <a href="#" class="ui-btn">点击加载更多</a>
-                        <img src="/images/vote-morephotos.png"/>
+                        <a href="#">
+                            <img src="/images/vote-clickmore.png"/></a>
                     </div>
                 </div>
                 <!--最新-->
@@ -702,8 +745,8 @@
                         </li>
                     </ul>
                     <div class="ui-content vote-clickkmore">
-                        <a href="#" class="ui-btn">点击加载更多</a>
-                        <img src="/images/vote-morephotos.png"/>
+                        <a href="#">
+                            <img src="/images/vote-clickmore.png"/></a>
                     </div>
                 </div>
             </div>
@@ -801,9 +844,25 @@
             </div>
         </div>
     </div>
+    <div data-role="footer">
+
+        <!--二维码votePopup弹出层-->
+        <div data-role="popup" id="votePopup" class="ui-content" data-overlay-theme="b">
+            <p>请进入公众号投票，长按二维码进入</p>
+            <a href="#pageone"  class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete
+                         ui-btn-icon-notext ui-btn-right" id="closeBtn2">Close</a>
+            <img src="/images/vote-qrcode.png">
+        </div>
+        <!--二维码joinPopup弹出层-->
+        <div data-role="popup" id="joinPopup" class="ui-content" data-overlay-theme="b">
+            <p>请进入公众号参加，长按二维码进入</p>
+            <a href="#pageone"  class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete
+                         ui-btn-icon-notext ui-btn-right"  id="closeBtn3">Close</a>
+            <img src="/images/vote-qrcode.png">
+        </div>
+    </div>
 </div>
-<script src="/js/jquery-1.11.3.min.js"></script>
-<script src="/js/jquery.mobile-1.4.5.min.js"></script>
+
 <script>
     $(function () {
         $(".vote-photo>div a").click(function () {

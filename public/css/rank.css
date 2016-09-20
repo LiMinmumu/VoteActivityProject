@@ -11,7 +11,7 @@ body{
     color: white;
     background-color: #55a5ef;
 }
- .vote-rank, .vote-ranklist{
+.vote-rank, .vote-ranklist{
     padding: 0;
 }
 .vote-ranklist{
@@ -60,40 +60,17 @@ table, td, th {
 
 /*点击加载更多*/
 .vote-clickkmore{
-    width: 60%;
-    margin: 30px auto;
+    width: 100%;
+    margin-top: 1.5rem;
     position: relative;
 }
-.vote-clickkmore a{
-    width: 10rem;
-    height: 1rem;
-    line-height: 1rem;
-    background-color: #fff;
-    color: #55a5ef;
-    font-size: .8rem;
-    margin: 0;
-    padding: 10px;
-    border-radius: 40px;
-}
-.vote-clickkmore img{       /*pad*/
-    position: absolute;
-    left: 61%;
-    top: 1.4rem;
-    width: 5%;
+.vote-clickkmore img{
+    width: 11rem;
+    margin: 0 4rem;
+    left: 0;
+    top: 0;
 }
 
-@media only screen and (max-width: 320px) {  /*4和5*/
-    .vote-clickkmore img{
-        left: 64%;
-        top: 1.8rem;
-    }
-}
-@media only screen and (max-width: 414px) and (min-width:375px)  { /*6和6p*/
-    .vote-clickkmore img{
-        left: 63%;
-        top: 1.7rem;
-    }
-}
 /*底部*/
 .vote-fix-nav{
     position:fixed;
