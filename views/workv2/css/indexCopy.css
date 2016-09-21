@@ -3,7 +3,6 @@ fieldset,legend,input,button,textarea,p,th,td
 { margin:0; padding:0; }
 body{
     background: #55a5ef !important;
-    font-family: 'Microsoft YaHei',Arial,Helvetica,sans-serif;
 }
 p,span,a{
     text-shadow: none !important;
@@ -281,7 +280,6 @@ a,button,input,optgroup,select,textarea {
     font-size: 1rem;
     color: #fff;
     text-shadow: none !important;
-    margin-left: 4.5rem;
 }
 .vote-prize-wraper .rline{
     box-sizing: border-box;
@@ -326,7 +324,7 @@ a,button,input,optgroup,select,textarea {
 }
 .vote-rule-detail{
     padding: 0 20px;
-    font-size: .75rem;
+    font-size: .6rem;
 }
 .vote-prize-rule-desc{
     background-color: #99c9f5;
@@ -367,7 +365,7 @@ a,button,input,optgroup,select,textarea {
 .vote-fix-nav span{
     color:#fff !important;
 }
-/*弹出层--注册页面*/
+/*注册页面*/
 .vote-register{
     width: 100%;
 }
@@ -384,32 +382,35 @@ a,button,input,optgroup,select,textarea {
     left: 0;
     z-index: 999;
 }
-#join{
-    margin: 2rem;
-    padding: 1rem 1rem 0 1rem;
-    color: #fff;
-    font-size: .7rem;
+.popcontainer{
     position: relative;
+    padding: 2rem 2rem 0 2rem;
     border: 1px solid #fff;
+    margin: 4rem;
     border-radius: 2rem;
+}
+#join{
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+    color: #fff;
+    font-size: 1rem;
 }
 .registerinfotitle{
     text-align: center;
 }
 .registerinfotitle h1{
     text-align: center;
-    font-size: .9rem;
+    font-size: 1.2rem;
     color: #fff;
 }
 .registerinfotitle p{
-    font-size: .5rem;
+    font-size: .6rem;
     color: #d3f10b;
 }
 #join>.registerinfo input{
-    height: 1.4rem;
-    padding: 0;
     display: inline-block;
     border:none;
+    height: 2rem;
 }
 #join>.registerinfo input[type=radio]{
     height: .8rem;
@@ -417,26 +418,25 @@ a,button,input,optgroup,select,textarea {
     margin-top: -5px;
 }
 .registerinfo{
-    margin-top: .5rem;
+    margin-top: 1rem;
 }
 .registerinfo,.activityPhoto,.vote-profile-words,.submitInfo{
     padding: .8rem;
     color: #ffffff;
 
 }
-
+.registerinfo div{
+    display: inline-block;
+}
 .registername,.registersex,.registerphone,.validcode{
     border: 1px solid #fff;
     border-radius: 2rem;
-    height: 1.4rem;
+    height: 2rem;
     width: 100%;
-    margin-bottom: .7rem;
+    margin-bottom: .9rem;
 }
 .registername>div,.registerphone>div,.validcode>div{
-    float: right;
-    height: 1.4rem;
-    width: 75%;
-    margin: 0;
+    width: 70%;
     border:none;
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -444,10 +444,10 @@ a,button,input,optgroup,select,textarea {
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
+    margin: 0;
 }
 .registersex>div{
-    width:11%;
-    display: inline-block;
+    width:10%;
 }
 .ui-radio>input{
     height: 1rem;
@@ -456,8 +456,8 @@ a,button,input,optgroup,select,textarea {
 }
 .registername span,.registerphone span,.registersex span{
     margin-left: .8rem;
-    height: 1.4rem;
-    line-height: 1.4rem;
+    height: 2rem;
+    line-height: 2rem;
 }
 
 
@@ -468,7 +468,7 @@ a,button,input,optgroup,select,textarea {
 }
 .vote-profile-words div{
     border:solid 1px #fff;
-    padding: .3rem;
+    padding: .5rem;
     border-radius:10px;
     min-height: 2rem;
     text-overflow: ellipsis;
@@ -479,20 +479,9 @@ a,button,input,optgroup,select,textarea {
 .vote-profile-words{
     margin-top: .3rem;
 }
-.vote-profile-words textarea{
-    width:11.5rem;
-    height:75px !important;
-    border:1px solid #ffffff;
-    background-color:transparent;
-    color:#fff;
-    border-radius: 20px;
-    padding: 0.5rem;
-    resize : none;
-}
 .validcode>div{
-    float: none;
-    margin-left: 1rem;
-    height: 1.4rem;
+    height: 2rem;
+    margin: 0;
 }
 .validcode
 {
@@ -500,17 +489,17 @@ a,button,input,optgroup,select,textarea {
 }
 #sendVerifyCode{
     position: absolute;
-    left: 7rem;
-    top: 0;
-    height: .8rem;
-    line-height: .8rem;
-    padding: .2rem .3rem;
-    margin: .15rem 0 .15rem -.5rem;
+    left: 9rem;
+    top: .1rem;
+    height: 1rem;
+    padding: .4rem .8rem;
+    line-height: 1rem;
+    margin: 0;
     background-color: #f56969;
     border-radius: 2rem;
     border: none;
     color: #fff;
-    font-size: .6rem;
+    font-size: .8rem;
 }
 @media screen and (max-width: 320px) {
     #sendVerifyCode{
@@ -524,7 +513,7 @@ a,button,input,optgroup,select,textarea {
     color: #d3f10b;
 }
 .activityPhoto p,.vote-profile-words p{
-    margin-left: .8rem;
+    margin-left: .5rem;
     margin-bottom: .5rem;
 }
 .activityPhoto, .vote-profile-words{
@@ -532,14 +521,14 @@ a,button,input,optgroup,select,textarea {
     padding-bottom:0;
 }
 .submitInfo a{
-    height: .8rem;
+    height: 1rem;
     width: 50%;
-    margin: .4rem auto;
+    margin: .5rem auto;
     padding: .5rem;
     background-color: #f56969;
     border-radius: 2rem;
-    line-height: .8rem;
-    font-size: .8rem;
+    line-height: 1rem;
+    font-size: 1.2rem;
     color: #fff;
     border: none;
 }
@@ -554,76 +543,4 @@ a,button,input,optgroup,select,textarea {
     opacity: .5;
     border:1px solid red
 }
-/*二维码弹出层样式*/
-#votePopup,#joinPopup{
-    width: 100%;
-    height: 15rem;
-    margin: 0 auto;
-    padding: 1rem 1rem .5rem 1rem;
-    text-align: center;
-    color: #fff;
-    font-weight: 600;
-    border: solid 1px #fff;
-    box-shadow: none;
-}
-#votePopup p,#joinPopup p{
-    font-size: .65rem;
-    font-weight: 600;
-}
-#votePopup img,#joinPopup img{
-    width: 100%;
-    height: 13rem;
-    margin-top: .5rem;
-}
-#votePopup-popup, #joinPopup-popup{
-    width: 55%;
-    max-width: 12rem;
-    top: 8rem !important;
-    left: 4rem!important;
-}
 
-
-/*赛事说明弹出层*/
-.desc-pop-wrapper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 1px;
-    width: 100%;
-    height: 650%;
-    background-color: black;
-    z-index: 1001;
-    -moz-opacity: 0.5;
-    opacity: .5;
-}
-.desc-pop{
-    position: fixed;
-    z-index: 1002;
-    top: 25%;
-    left: 5%;
-    width: 90%;
-    background-color: transparent;
-    border-radius: 2rem;
-    border: 1px solid rgb(255, 255, 255);
-}
-.desc-pop>a{
-    position:absolute;
-    top:0;
-    right:.8rem;
-
-}
-.desc-pop>a>img{
-    width: 1.4rem;
-    height: 1.4rem;
-}
-.desc-pop .vote-prize-rule-desc  p,.desc-pop .vote-prize-rule-desc{
-    background-color: transparent;
-}
-.desc-pop .vote-prize-rule-desc  p{
-    color: #ffffff;
-    font-size: .7rem
-}
-.desc-pop .vote-prize-rule-desc{
-    padding: 0 !important;
-}
