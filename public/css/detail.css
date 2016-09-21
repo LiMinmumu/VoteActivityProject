@@ -9,18 +9,36 @@ p,span,a{
     text-shadow: none !important;
 }
 a,button,input,optgroup,select,textarea {
-    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*鍘绘帀a銆乮nput鍜宐utton鐐瑰嚮鏃剁殑钃濊壊澶栬竟妗嗗拰鐏拌壊鍗婇�忔槑鑳屾櫙*/
 }
-/*头部*/
+/*澶撮儴*/
 .header{
     width: 100%;
     height: auto;
 }
-.common-font{
-    font-size:12px;
+.common-font-miniless{
+    font-size: 11px;
+}
+.common-font-mini{
+    font-size: 12px;
+}
+.common-font-normalless{
+    font-size: 13px;
+}
+.common-font-normal{
+    font-size:14px;
+}
+.common-font-large{
+    font-size: 15px;
+}
+.common-font-larger{
+    font-size: 20px;
 }
 .common-bg{
     background-color:#fff;
+}
+.common-up{
+    margin-top: .1rem;
 }
 .daysleft{
     position: absolute;
@@ -46,4 +64,81 @@ a,button,input,optgroup,select,textarea {
     height: auto;
 }
 
+.detail-desc,.detail-donation-item {
+    padding: .3rem .2rem;
+}
+.detail-donation-item{
+    line-height: 1;
+}
+.detail-donation-bag,.detail-bags-desc{
+    display: inline-block;
+}
+.detail-donation-bag img{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: .6rem;
+}
+.detail-bags-desc{
+    float: right;
+    width: 78%;
+    border-bottom: 1px solid #dcdddd;
+    padding-bottom: .15rem;
 
+
+}
+.process-bottom,.process-up{
+    position:absolute;
+    height: 8px;
+    border-radius: 4px;
+    margin: .2rem 0;
+}
+.process-up{
+    width: 35%;
+    background-color: #ff4965;
+}
+.process-bottom{
+    width: 75%;
+    background-color: #dcdddd;
+}
+.detail-bags-sum{
+    margin-top: .25rem;
+    width: 100%;
+    overflow: hidden;
+    line-height: 1.1;
+}
+.detail-bags-sum ul{
+    list-style: none;
+    width: 116%;
+
+}
+.detail-bags-sum ul li{
+    display: inline-block;
+    width:30%;
+}
+.detail-donation-second .process-up{
+    width: 17%;
+}
+.detail-donation-second .detail-bags-desc{
+    padding-bottom: 0;
+    border: none;
+}
+.detail-donation-second{
+    height:1.5rem;
+    padding-bottom: .2rem;
+    border-bottom: 1px solid #dcdddd;
+}
+.detail-participant-portrait{
+    height: 1rem;
+    line-height: 1rem;
+}
+.detail-participant{
+    padding: .25rem .2rem;
+}
+.detail-participant-portrait img{
+    height: .46rem;
+    width: .46rem;
+    float: left;
+}
+.detail-participant-portrait img:not(:first-child){
+    margin-left: 6px;
+}

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
-    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
     <meta name="format-detection" content="telephone=no">
 
     <title>公益详情</title>
@@ -14,38 +14,115 @@
     <script src="/js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-       <div class="header common-bg">
-           <div class="daysleft common-font">
-               <p>剩余天数：18 天</p>
-           </div>
-           <div class="detail-banner">
-               <img src="/images2/detai-banner.jpg" />
-           </div>
-           <div class="detail-desc common-font">
-               <p>山区儿童定向捐赠。新学期开始了，他们需要1-3年级儿 童课外书籍、文具、书包，献出你的一份爱心吧!</p>
-           </div>
-       </div>
+<div class="header common-bg">
+    <div class="daysleft common-font-mini">
+        <p>剩余天数：18 天</p>
+    </div>
+    <div class="detail-banner">
+        <img src="/images2/detai-banner.jpg"/>
+    </div>
+    <div class="detail-desc common-font-normal">
+        <p>山区儿童定向捐赠。新学期开始了，他们需要1-3年级儿 童课外书籍、文具、书包，献出你的一份爱心吧!</p>
+    </div>
+</div>
+<div class="main common-up common-bg">
+    <div class="detail-donation-item">
+        <div class="detail-donation-bag">
+            <img src="/images2/detail-bags.jpg"/>
+        </div>
+        <div class="detail-bags-desc">
+            <div class="detail-bags-title">
+                <p class="common-font-normal ">男童女童迪士尼幼儿园书包</p>
+                    <div class="process-bottom"></div>
+                    <div class="process-up"></div>
+                <div class="detail-bags-sum">
+                    <ul>
+                        <li>
+                            <p class="common-font-normalless"><span class="common-font-larger">53</span>个</p>
+
+                            <p class="common-font-miniless">已捐数量</p>
+                        </li>
+                        <li>
+                            <p class="common-font-normalless"><span class="common-font-larger">53</span>%</p>
+
+                            <p class="common-font-miniless">项目进度</p>
+                        </li>
+                        <li>
+                            <p class="common-font-normalless"><span class="common-font-larger">100</span>个</p>
+
+                            <p class="common-font-miniless">目标梳理</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="detail-donation-item detail-donation-second" style="margin-top: .2rem;">
+        <div class="detail-donation-bag">
+            <img src="/images2/detail-desk.jpg"/>
+        </div>
+        <div class="detail-bags-desc">
+            <div class="detail-bags-title">
+                <p class="common-font-normal ">学生课桌椅单人书桌</p>
+                <div class="process-bottom"></div>
+                <div class="process-up"></div>
+                <div class="detail-bags-sum">
+                    <ul>
+                        <li>
+                            <p class="common-font-normalless"><span class="common-font-larger">28</span>个</p>
+
+                            <p class="common-font-miniless">已捐数量</p>
+                        </li>
+                        <li>
+                            <p class="common-font-normalless"><span class="common-font-larger">28</span>%</p>
+
+                            <p class="common-font-miniless">项目进度</p>
+                        </li>
+                        <li>
+                            <p class="common-font-normalless"><span class="common-font-larger">100</span>个</p>
+
+                            <p class="common-font-miniless">目标梳理</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="detail-participant">
+        <div class="detail-participant-portrait">
+            <img src="/images2/detail-portrait.jpg" />
+            <img src="/images2/detail-portrait.jpg" />
+            <img src="/images2/detail-portrait.jpg" />
+            <img src="/images2/detail-portrait.jpg" />
+            <img src="/images2/detail-portrait.jpg" />
+            <img src="/images2/detail-portrait.jpg" />
+            <img src="/images2/detail-portrait.jpg" />
+            <img src="/images2/detail-portrait.jpg" />
+        </div>
+        <div>
+            <span class="common-font-normal">有134人参与</span> <img src="/images2/detail-rightarrow.jpg" />
+        </div>
+    </div>
+</div>
 
 
+<script>
+    //设置html fontSize
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
 
 
-       <script>
-           //设置html fontSize
-           (function (doc, win) {
-               var docEl = doc.documentElement,
-                       resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-                       recalc = function () {
-                           var clientWidth = docEl.clientWidth;
-                           if (!clientWidth) return;
-                           docEl.style.fontSize = (clientWidth / 7.5) + 'px';
-                       };
-               if (!doc.addEventListener) return;
-               win.addEventListener(resizeEvt, recalc, false);
-               doc.addEventListener('DOMContentLoaded', recalc, false);
-           })(document, window);
-
-
-       </script>
+</script>
 
 </body>
 </html>
