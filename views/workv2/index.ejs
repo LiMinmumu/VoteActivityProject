@@ -894,8 +894,14 @@
                     $(".desc-pop-wrapper").css("display", "none");
                     $(".desc-pop").css("display", "none");
                     $("#body").css("overflow-y", "auto");
-                    $("#header").css("-webkit-filter", "blur(0)");
-                    $("#main").css("-webkit-filter", "blur(0)")
+                    $("#header").css({
+                        "-webkit-filter": "initial",
+                        "filter":"initial"
+                    });
+                    $("#main").css({
+                        "-webkit-filter": "initial",
+                        "filter":"initial"
+                    });
                 });
                 /*其他所有弹层在弹出后，页面不会显示多余的部分*/
                 $("a[data-rel='popup']").click(function () {
@@ -916,8 +922,14 @@
                 $(".ui-popup a[id^='close']").click(function () {
                     $("#body").css("overflow-y", "auto");
                     $("html").css({"overflow-y": "auto", "height": "auto"});
-                    $("#header").css("-webkit-filter", "blur(0)");
-                    $("#main").css("-webkit-filter", "blur(0)")
+                    $("#header").css({
+                        "-webkit-filter": "initial",
+                        "filter":"initial"
+                    });
+                    $("#main").css({
+                        "-webkit-filter": "initial",
+                        "filter":"initial"
+                    });
                 })
             })
         </script>
@@ -974,6 +986,7 @@
             $(this).addClass("active");
             $(this).parent().siblings().children("a").removeClass('active');
             var $item = $(this).attr("href");
+            console.log($item)
             $($item).css("display", "block");
             $($item).siblings().hide();
         });

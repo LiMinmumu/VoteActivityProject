@@ -1,0 +1,75 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,
+fieldset,legend,input,button,textarea,p,th,td
+{ margin:0; padding:0; }
+body{
+    background: #efefef;
+    font-family: 'Microsoft YaHei',Arial,Helvetica,sans-serif;
+}
+p,span,a{
+    text-shadow: none;
+}
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉高亮效果*/
+}
+
+
+.donation-record-list>p{
+    height: .9rem;
+    line-height: .9rem;
+    font-size: 14px;
+    color:#ff4965;
+    text-align: center;
+}
+.donation-record{
+    padding: .2rem;
+    margin: 0 .2rem;
+    background-color: #fff;
+    border: 1px solid #dcdddd;
+    border-radius: .2rem;
+}
+
+.donation-portrait{
+    height: .9rem;
+    line-height: .9rem;
+    display: inline-block;
+    float: left;
+    margin-right: .2rem;
+}
+.donation-portrait img{
+    height: .9rem;
+    line-height: .9rem;
+}
+.donation-username{
+    border-bottom: 1px dashed #dedede;
+    padding-bottom: .2rem;
+}
+.donation-username>p{
+    float: left;
+}
+.donation-record p, .donation-record span{
+    font-size: 14px;
+}
+.donation-record>div{
+    height: .9rem;
+    line-height: .9rem;
+}
+.donation-record>div:not(:first-child){
+    height: .65rem;
+    line-height: .65rem;
+}
+.doname-desc-bag {
+    margin-top: .2rem;
+}
+.doname-desc-bag p, .doname-desc-desk p{
+    float:left;
+}
+.doname-desc-bag p:nth-child(1), .doname-desc-desk p:nth-child(1){
+    width: 60%;
+}
+.doname-desc-bag p:last-child, .doname-desc-desk p:last-child{
+    float:right;
+}
+
+.doname-desc-bag p:not(:first-child), .doname-desc-desk p:not(:first-child){
+    color: #9fa0a0;
+}
