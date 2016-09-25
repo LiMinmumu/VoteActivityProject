@@ -24,4 +24,20 @@ var router = express.Router();
     res.render('workv2/detail')
   });
 
+/*个人中心-参加的公益和我的公益*/
+  router.get('/joinedcharity',function(req,res,next){
+    res.render('workv2/joinedcharity')
+  });
+  router.get('/mycharity',function(req,res,next){
+   res.render('workv2/mycharity')
+  })
+
+//捐赠
+router.get('/charityparticipant',function(req,res,next){
+  res.render('workv2/charityparticipant')
+});
+router.get('/todonate',function(req,res,next){
+  res.render('workv2/todonate')
+})
+
 module.exports = router;
