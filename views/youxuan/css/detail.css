@@ -1,0 +1,885 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,
+fieldset,legend,input,button,textarea,p,th,td
+{ margin:0; padding:0; }
+body{
+    background: #efefef;
+    font-family: 'Microsoft YaHei',Arial,Helvetica,sans-serif;
+}
+p,span,a{
+    text-shadow: none;
+}
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉点击时的高亮效果*/
+}
+/*公益详情页头部*/
+.donationheader{
+    width: 100%;
+    height: auto;
+}
+.common-font-miniless{
+    font-size: 11px;
+}
+.common-font-mini{
+    font-size: 12px;
+}
+.common-font-normalless{
+    font-size: 13px;
+}
+.common-font-normal{
+    font-size:14px;
+}
+.common-font-large{
+    font-size: 15px;
+}
+.common-font-larger{
+    font-size: 20px;
+}
+.common-bg{
+    background-color:#fff;
+}
+.common-up{
+    margin-top: .2rem;
+}
+.daysleft{
+    position: absolute;
+    top: 1.2rem;
+    left:0;
+    width: 110px;
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+    opacity: .7;
+    padding: .1rem 0;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+.daysleft p{
+    margin-left: 8%;
+}
+.detail-banner{
+    width: 100%;
+    height:3.5rem ;
+}
+.detail-banner img{
+    width: 100%;
+    height: 3.5rem;
+}
+
+.main{
+    padding-top:.35rem;
+}
+.detail-desc p{
+    padding: .3rem .2rem;
+}
+.detail-donation-item{
+    padding:  0 .2rem;
+    height:1.95rem;
+    line-height: 1;
+}
+
+.detail-donation-bag,.detail-bags-desc{
+    display: inline-block;
+}
+.detail-donation-item .detail-bags-desc .detail-bags-title p.common-font-normal{
+    color:#9fa0a0;
+}
+.detail-donation-item:not(:first-child){
+    margin-top:.2rem;
+}
+@media screen and (max-width:320px){
+    .detail-donation-item:not(:first-child){
+        margin-top:.3rem;
+    }
+}
+
+.detail-bags-title p.common-font-normal {
+    height: 14px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.detail-donation-bag img{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border:2px solid #efefef;
+}
+.detail-bags-desc{
+    float: right;
+    width: 78%;
+    border-bottom: 1px solid #dcdddd;
+    padding-bottom: .3rem;
+}
+.process-bottom,.process-up{
+    position:absolute;
+    height: .12rem;
+    border-radius: .06rem;
+    margin: .3rem 0;
+}
+.process-up{
+    background-color: #ff4965;
+}
+.process-bottom{
+    width: 74%;
+    background-color: #dcdddd;
+}
+.detail-bags-sum{
+    margin-top: .32rem;
+    width: 100%;
+    overflow: hidden;
+    line-height: 1.1;
+}
+.detail-bags-sum ul{
+    list-style: none;
+    width: 116%;
+    margin-top: .3rem;
+}
+.detail-bags-sum ul li{
+    display: inline-block;
+    width:28%;
+}
+.detail-bags-sum ul li:first-child{
+    color:#ff4965;
+}
+.detail-bags-sum ul li:nth-child(2){
+    margin: 0 .48rem;
+}
+
+.detail-donation-last .detail-bags-desc{
+    padding-bottom: 0;
+    border: none;
+}
+.detail-donation-last{
+    border-bottom: 1px solid #dcdddd;
+    height:2rem;
+}
+
+
+@media screen and (max-width:320px){
+    .detail-bags-sum ul li:nth-child(2) {
+        margin: 0 .4rem;
+    }
+    .detail-donation-last{
+        padding-bottom:.2rem;
+    }
+    .main{
+        padding-top:.5rem;
+    }
+    .detail-donation-item{
+        height: 2rem !important;
+    }
+}
+.detail-participant{
+    height: .5rem;
+    padding: .25rem .2rem;
+    line-height: 0;
+}
+.detail-participant-portrait img{
+    height: .46rem;
+    width: .46rem;
+    float: left;
+    border-radius:.23rem;
+}
+.detail-participant-portrait img:not(:first-child){
+    margin-left: 6px;
+}
+.detail-participant-portrait ,.detail-donation-people{
+    display: inline-block;
+}
+.detail-donation-people{
+    float: right;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+.detail-donation-people a{
+    color: #9fa0a0;
+    text-decoration: none;
+}
+.detail-donation-people img, .detail-publish img{
+    height: 13px;
+    margin-left: .1rem;
+}
+.detail-publish{
+    height: 1rem;
+    line-height: 1rem;
+    padding: 0 .2rem;
+    margin: .2rem auto;
+    background-color:#fff;
+}
+.detail-publish p{
+    font-size: 15px;
+    /*display: inline-block;*/
+    float: left;
+}
+.detail-publish a{
+    display: inline;
+    float: right;
+    height: 1rem;
+    vertical-align: top;
+}
+.detail-publish span{
+    font-size: 14px;
+    display: inherit;
+}
+.detail-project-detail{
+    padding-top: .1rem;
+    background-color: #fff;
+}
+.detail-project-title{
+    height: .9rem;
+    line-height: .9rem;
+    border-bottom: 1px solid #dcdddd;
+}
+.detail-project-title h2{
+    font-size: 15px;
+    font-weight: 500;
+}
+.project-desc{
+    padding: 0 .2rem;
+    background-color: #fff;
+}
+.project-desc p{
+    font-size: 14px;
+    line-height: 1.5;
+}
+.detail-donation-article{
+    overflow: hidden;
+}
+.detail-article-height{
+    max-height: 9rem;
+    padding-top: .2rem;
+}
+
+.detail-donation-article img,.detail-donation-article>p>img{
+    max-width: 100%;
+    margin-top: .2rem;
+}
+.project-detail,.project-record{
+    display: inline-block;
+}
+.project-detail{
+    float:left;
+    margin-left: 15%;
+}
+.noorder{
+    margin-top: 1rem !important;
+}
+.project-active{
+    color: #ff4965;
+    border-bottom: 2px solid #ff4965;
+}
+.project-record{
+    float:right;
+    margin-right: 15%;
+}
+.donation-address{
+    font-size: 14px;
+    margin-top: .35rem;
+}
+.project-desc h3{
+    color:#9fa0a0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: -.3rem;
+}
+.detail-click-more{
+    margin-top: .5rem;
+    background-color:#fff;
+    text-align: center;
+    padding-bottom: .1rem;
+}
+.detail-click-more h3{
+    font-size:14px;
+    color:#9fa0a0;
+}
+.detail-click-more img{
+    height: 7px;
+    width:13px;
+    display: inherit;
+    margin: .1rem auto;
+}
+.detail-donation-tab{
+    padding-top: 1px;
+    margin-bottom:1.2rem;
+}
+
+/*公益详情页底部*/
+.detail-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: #ff4965;
+    margin-top: .3rem;
+    line-height: 1rem;
+    text-align: center;
+}
+.detail-footer a{
+    text-decoration: none;
+
+}
+.detail-footer span{
+    display: block;
+    font-size: 18px;
+    color: #fff;
+}
+/*发放记录*/
+.detail-donation-records section:nth-child(2n){
+    background-color: #ffffff;
+}
+.detail-donation-records section:nth-child(2n+1){
+    background-color: #fbfbfb;
+}
+.donation-record{
+    border-bottom: 1px solid #dcdddd;
+    padding-bottom: .2rem;
+}
+.donation-username{
+    margin-left: .2rem;
+    border-bottom: 1px dashed #dedede;
+    margin-bottom: .2rem;
+}
+.donation-record p, .donation-record span{
+    font-size: 14px;
+}
+.donation-record>div{
+    height: .9rem;
+    line-height: .9rem;
+}
+.donation-record>div:not(:first-child){
+    height: .65rem;
+    line-height: .65rem;
+}
+
+.doname-desc-item{
+    margin: 0 .2rem;
+}
+.doname-desc-item p{
+    float:left;
+}
+.doname-desc-item p:nth-child(1){
+    width: 60%;
+}
+.doname-desc-item p:last-child{
+    float:right;
+}
+.doname-desc-item p:not(:first-child){
+    color: #9fa0a0;
+}
+.donation-record div.doname-desc-item:first-child{
+    margin-top: .2rem;
+}
+
+/*公益详情页结束*/
+
+/*我要捐赠页*/
+.todonation-item{
+    background-color: #fff;
+    margin: 0 .2rem 0;
+    border-radius: .2rem;
+    height: 1.85rem;
+}
+.todonation-item:first-child{
+    margin-top: .4rem;
+}
+.todonation-item>div>div:not(:last-child){
+    float: left;
+}
+.todonation-item>div:last-child{
+    float: right;
+}
+
+.todonation-checked{
+    margin: 0 .1rem 0 .3rem;
+    line-height: 1.85rem;
+    width: 18px;
+}
+.todonation-checked i{
+    font-size:12px;
+    border-radius: 8px;
+    border:1px solid #9fa0a0;
+    padding: 0 0.8px;
+    color: #fff;
+}
+.todonation-checked i.todonate-active{  /*选中时，颜色和边框改变*/
+    color:#ff4965;
+    border:1px solid #fff;
+    font-size: 20px;
+    position: relative;
+    left: -4px;
+}
+
+.todonation-portrait img{
+    width: 1.3rem;
+    border-radius: .65rem;
+    margin-top: .3rem;
+}
+
+.todonate-desc{
+    float: left;
+    margin: .4rem 0 0 .2rem;
+    line-height: 1.5;
+}
+
+.todonate-desc p:first-child{
+    max-width: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    line-height:1.2;
+}
+.todonate-desc p:last-child{
+    font-size: 15px;
+    color: #ff4965;
+}
+.todonate-nums{
+    width: 25%;
+    margin: .6rem 0;
+}
+.todonate-nums>a:first-child{
+    float: left;
+    font-size: .3rem;
+    display: inline-block;
+    width: .45rem;
+    height: .45rem;
+    line-height: .45rem;
+    background-color: #fbfbfb;
+    text-align: center;
+    vertical-align: -webkit-baseline-middle;
+}
+.todonate-nums>div{
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin: 0 .1rem;
+    font-size: .3rem;
+    border: none;
+    outline: 0;
+    text-align: center;
+    vertical-align: -webkit-baseline-middle;
+    background: #f2f2f3;
+}
+
+.todonate-nums input{
+    float:left;
+    width: .45rem;
+    height: .45rem;
+    min-height: .45rem;
+    padding:0;
+    font-size: .3rem;
+    border: none;
+    outline: 0;
+    text-align: center;
+    background: #f2f2f3;
+    margin: 0 2px;
+}
+.todonate-nums>a:last-child{
+    float: left;
+    font-size: .3rem;
+    display: inline-block;
+    width: .45rem;
+    height: .45rem;
+    line-height: .45rem;
+    background-color: #f2f2f3;
+    text-align: center;
+    vertical-align: -webkit-baseline-middle;
+}
+.todonate-item-list section:not(:first-child){
+    margin-top: .2rem;
+}
+.tocharity-confirm{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:1rem;
+    text-align:center;
+    background-color:#ff4965;
+}
+.tocharity-confirm a{
+    display: block;
+    margin-top: .32rem;
+    font-size:18px;
+    color:#fff;
+}
+
+/*我的捐赠页*/
+.my-donation-page>.donation-record,.donation-participants-main>.donation-record{
+    background-color:#fff;
+    border-radius: .2rem;
+    margin: .2rem .2rem 0 .2rem;
+}
+.donation-participants{
+    height: .9rem;
+    line-height: .9rem;
+    font-size: 14px;
+    font-weight: 500;
+    color:#ff4965;
+    text-align: center;
+    margin-bottom:-.2rem;
+}
+.donation-participants-main .donation-username{
+    height: .9rem !important;
+    line-height: .9rem  !important;
+}
+.donation-participants-main>.donation-record>.doname-desc-item>p:first-child{
+    height: .5rem!important;
+    width: 60%!important;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 1!important;
+    -webkit-box-orient: vertical!important;
+}
+.donation-record-list>p{
+    height: .9rem;
+    line-height: .9rem;
+    margin-top: 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    color:#ff4965;
+    text-align: center;
+    margin-bottom: -.2rem;
+}
+.donation-record doname-desc-item:first-child{
+    background-color:red;
+}
+.donation-portrait{
+    height: .9rem;
+    line-height: .9rem;
+    display: inline-block;
+    float: left;
+    margin-right: .2rem;
+}
+.donation-portrait img{
+    height: .9rem;
+    line-height: .9rem;
+    border-radius: 50%;
+}
+．my-donation-page .donation-record>.donation-username,.donation-participants-main .donation-username{
+    margin:0 .2rem .2rem .2rem;
+    padding: .2rem 0;
+    border-bottom: 1px dashed #dedede;
+}
+.donation-username>p{
+    float: left;
+}
+.donation-record p, .donation-record span{
+    font-size: 14px;
+}
+.donation-record>div{
+    height: .9rem;
+    line-height: .9rem;
+}
+．donation-participants-main .donation-record>div:first-child{
+    margin: 0 .2rem .2rem .2rem;
+    padding: .2rem 0;
+}
+.my-donation-name{
+    margin: 0 .2rem .2rem .2rem;
+    padding: .2rem 0;
+}
+.donation-record>div:not(:first-child){
+    height: .5rem;
+    line-height: .5rem;
+}
+.doname-desc-bag {
+    margin-top: .2rem;
+}
+.doname-desc-bag p, .doname-desc-desk p{
+    float:left;
+}
+.doname-desc-bag p:nth-child(1), .doname-desc-desk p:nth-child(1){
+    width: 60%;
+}
+.doname-desc-bag p:last-child, .doname-desc-desk p:last-child{
+    float:right;
+}
+
+.doname-desc-bag p:not(:first-child), .doname-desc-desk p:not(:first-child){
+    color: #9fa0a0;
+}
+.donation-record:not(:first-child){
+    margin-top: .2rem;
+}
+.charity-mydonation-list >.donation-record{
+    background-color: #fff;
+    border-radius: .2rem;
+    margin: .2rem;
+}
+.charity-mydonation-list >.donation-record >.doname-desc-item p:first-child{
+    height: .5rem!important;
+    width: 60%!important;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 1!important;
+    -webkit-box-orient: vertical!important;
+}
+/*参与的公益页面*/
+.my-charity-list{
+    height: 1.62rem;
+    padding-top: .3rem;
+    background-color: #fff;
+}
+.my-charity-container{
+    height: 1.6rem;
+    margin-left: .3rem;
+    border-bottom: 1px solid #dcdddd;
+}
+.my-charity-container>a{
+    display:inline-block;
+}
+.donation-image, .donation-item{
+    float:left;
+}
+.donation-image img{
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: .15rem;
+}
+.donation-item{
+    margin: .1rem 0 .2rem .2rem;
+    font-size: 12px;
+    color: #9fa0a0;
+}
+.donation-item p:not(:first-child){
+    display: inline;
+}
+.donation-item p:first-child{
+    font-size: 14px;
+    color: #595757;
+}
+.my-charity{
+    float: right;
+    margin: .3rem .3rem 0 0;
+}
+.my-charity a{
+    padding: .15rem .25rem;
+    border: 1px solid #ff4965;
+    border-radius: .3rem;
+    font-size: 13px;
+    color: #ff4965;
+}
+.donation-item>p:first-child{
+    width: 3rem;
+    max-height: .8rem;
+    margin-bottom: .2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.my-joined-charity-list section:last-child>.my-charity-container{
+    border:none;
+}
+.my-joined-charity-list section:last-child{
+    border-bottom: 1px solid #dcdddd;
+}
+.my-joined-charity-list{
+    margin-top: 1rem;
+}
+/**/
+
+
+
+/*公益列表页*/
+.charityl .cnav{
+    background-color:#fff;
+    padding:.3rem .2rem;
+    width:100%;
+    box-sizing:border-box;
+}
+.charityl .cnav .item{
+    display:inline-block;
+    width:3.45rem;
+    height:2rem;
+    box-sizing:border-box;
+    border-radius:6px;
+    background-color:#e7f7dc;
+    position:relative;
+    overflow:hidden;
+}
+.charityl .cnav .item:nth-child(2){
+    background-color:#fdf1cf;
+    margin-left:.2rem;
+}
+.charityl .cnav .emb{
+    position:absolute;
+    top:.54rem;
+    right:10px;
+    width:1.2rem;
+}
+.charityl .cnav .emb img{
+    width:100%;
+}
+.charityl .cnav .mtitle{
+    padding:.2rem 0 0 .2rem;
+    width:2rem;
+    overflow:hidden;
+    white-space:nowrap;
+    word-break:break-all;
+    text-overflow:ellipsis;
+}
+.charityl .cnav .stitle{
+    padding:.1rem 0 0 .2rem;
+    width:2rem;
+    font-size:12px;
+    color:#9fa0a0;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    word-break:break-all;
+    text-overflow:ellipsis;
+    -webkit-box-orient:vertical;
+}
+@media screen and (min-width:375px){
+    .charityl .cnav .emb{
+        width:1.4rem;
+    }
+    .charityl .cnav .stitle{
+        width:1.8rem;
+    }
+}
+.charityl .clist{
+    width:100%;
+    box-sizing:border-box;
+    padding:0 .2rem;
+}
+.charityl .clist .item{
+    display:block;
+    position:relative;
+    background-color:#fff;
+    border-radius:6px;
+    margin:.2rem 0;
+}
+.charityl .clist .mpic img{
+    width:100%;
+    height:3.32rem;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+}
+.charityl .clist .tip{
+    position:absolute;
+    top:.2rem;
+    left:0;
+    background-color:rgba(0,0,0,.4);
+    padding:.1rem .3rem .1rem .2rem;
+    color:#fff;
+    font-size:14px;
+    border-top-right-radius:12px;
+    border-bottom-right-radius:12px;
+}
+.charityl .clist .prap{
+    font-size:14px;
+    margin:.2rem;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    word-break:break-all;
+    text-overflow:ellipsis;
+    -webkit-box-orient:vertical;
+}
+.charityl .clist .attend{
+    border-top:1px solid #ededed;
+    height:1rem;
+}
+.charityl .clist .avatar{
+    padding-top:.2rem;
+    padding-left:.2rem;
+}
+.charityl .clist .avatar img{
+    width:.6rem;
+    height:.6rem;
+    border-radius:50%;
+    margin-right:6px;
+}
+.charityl .clist .total{
+    position:absolute;
+    bottom:.35rem;
+    right:0;
+    font-size:.3rem;
+    line-height:1;
+    padding-right:4px;
+    border-right:4px solid #ff4965;
+    color:#9fa0a0;
+}
+.charityl .clist .extip{
+    font-size:.3rem;
+    line-height:1;
+    margin-top:.35rem;
+    padding-left:.2rem;
+    color:#ff4965;
+}
+
+/*我赞过的*/
+.myzan-product-list{
+    margin-top: .2rem;
+}
+.myzan-product-list .donation-item>p:first-child{
+    width: 4rem !important;
+    line-height: 1.2;
+    margin-bottom: .1rem;
+}
+.myzan-product-list .donation-item>p:nth-child(2){
+    font-size:16px;
+    color:#ff4965;
+}
+.myzan-product-container{
+    display: inline-block;
+    background-color: #ff4965;
+    height: .6rem;
+    width: .6rem;
+    border-radius: 50%;
+    line-height: 1;
+    text-align: center;
+}
+.myzan-product-container i{
+    position: relative;
+    top: -.5rem;
+    color: #fff;
+    font-size: .4rem;
+}
+/*取消赞*/
+.myzan-delete-zan{
+    background-color: #dcdedd;
+}
+/*我的赞页面-头部*/
+.myzan-page-wrapper{
+    margin-top: 1rem;
+    display: block;
+    height: 1rem;
+    background-color: #fff;
+}
+.myzan-page-wrapper ul{
+    width: 60%;
+    height: 1rem;
+    line-height: 1rem;
+    margin: 0 auto;
+    list-style: none;
+}
+.myzan-page-wrapper li{
+    float: left;
+    font-size: 15px;
+    width: 33.3%;
+}
+.myzan-page-wrapper li:nth-child(2){
+    text-align: center;
+}
+.myzan-page-wrapper li:nth-child(3){
+    text-align: right;
+}
+.myzan-page-wrapper li span{
+    display: inline-block;
+}
+.myzan-page-wrapper li span.active{
+    border-bottom: 2px solid #ff4965;
+    color:#ff4965;
+}
