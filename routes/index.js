@@ -30,7 +30,7 @@ var router = express.Router();
   });
   router.get('/mycharity',function(req,res,next){
    res.render('workv2/mycharity')
-  })
+  });
 
 //捐赠
 router.get('/charityparticipant',function(req,res,next){
@@ -38,6 +38,6 @@ router.get('/charityparticipant',function(req,res,next){
 });
 router.get('/todonate',function(req,res,next){
   res.render('workv2/todonate')
-})
+});
 
 module.exports = router;
