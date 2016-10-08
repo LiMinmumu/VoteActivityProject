@@ -1,16 +1,3 @@
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,
-fieldset,legend,input,button,textarea,p,th,td
-{ margin:0; padding:0; }
-body{
-    background: #efefef;
-    font-family: 'Microsoft YaHei',Arial,Helvetica,sans-serif;
-}
-p,span,a{
-    text-shadow: none;
-}
-a,button,input,optgroup,select,textarea {
-    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉点击时的高亮效果*/
-}
 /*公益详情页头部*/
 .donationheader{
     width: 100%;
@@ -818,8 +805,31 @@ a,button,input,optgroup,select,textarea {
     padding-left:.2rem;
     color:#ff4965;
 }
-
-/*我赞过的*/
+.echarity{
+    position:absolute;
+    top:1rem;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color:#fff;
+    overflow-y:auto;
+    font-size:14px;
+}
+.echarity .logo{
+    margin:0 auto;
+    padding:.6rem 0;
+    width:3rem;
+    text-align:center;
+}
+.echarity .logo img{
+    width:100%;
+    min-width:130px;
+}
+.echarity .para{
+    padding:0 .4rem;
+    line-height:.6rem;
+}
+/*我赞过的页面改版-开始*/
 .myzan-product-list{
     margin-top: .2rem;
 }
@@ -834,7 +844,6 @@ a,button,input,optgroup,select,textarea {
 }
 .myzan-product-container{
     display: inline-block;
-    background-color: #ff4965;
     height: .6rem;
     width: .6rem;
     border-radius: 50%;
@@ -843,13 +852,12 @@ a,button,input,optgroup,select,textarea {
 }
 .myzan-product-container i{
     position: relative;
-    top: -.5rem;
-    color: #fff;
-    font-size: .4rem;
+    color: #ff4965;
+    font-size: .6rem;
 }
 /*取消赞*/
 .myzan-delete-zan{
-    background-color: #dcdedd;
+    color: #dcdedd !important;
 }
 /*我的赞页面-头部*/
 .myzan-page-wrapper{
@@ -859,7 +867,7 @@ a,button,input,optgroup,select,textarea {
     background-color: #fff;
 }
 .myzan-page-wrapper ul{
-    width: 60%;
+    width: 52%;
     height: 1rem;
     line-height: 1rem;
     margin: 0 auto;
@@ -879,7 +887,14 @@ a,button,input,optgroup,select,textarea {
 .myzan-page-wrapper li span{
     display: inline-block;
 }
-.myzan-page-wrapper li span.active{
+.myzan-page-wrapper li span.myzan-active{
     border-bottom: 2px solid #ff4965;
     color:#ff4965;
 }
+.myzan-list{
+    margin-top:.2rem;
+}
+.myzan-list-content .donation-item{
+    margin-left: .3rem;
+}
+/*我赞过的页面改版-结束*/

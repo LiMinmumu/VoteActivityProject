@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>瀑布流</title>
+    <style>
+        body, div {
+            margin: 0;
+            padding: 0
+        }
+        img {
+            border: 0;
+            width: 100%;
+        }
+        #optimizationlist-container {
+            text-align: left
+        }
+        #optimizationlist-container .cell {
+            padding: 5px 5px 0;
+            border: 1px solid #E3E3E3;
+            background: #F5F5F5;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        #optimizationlist-container p {
+            line-height: 20px;
+            margin-top: 5px
+        }
+    </style>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+    <script src='js/all.js'></script>
+</head>
+
+<body>
+<div id="optimizationlist-container">
+    <div class="cell"><img src="images2/111.jpg"/>
+
+        <p>宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+
+        <p>¥ 95.00</p></div>
+    <div class="cell"><img src="images2/222.jpg"/>
+
+        <p>宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+
+        <p>¥ 95.00</p></div>
+    <div class="cell"><img src="images2/333.jpg"/>
+
+        <p>宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+
+        <p>¥ 95.00</p></div>
+    <div class="cell"><img src="images2/444.jpg"/>
+
+        <p>宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+
+        <p>¥ 95.00</p></div>
+    <div class="cell"><img src="images2/555.jpg"/>
+
+        <p>宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+
+        <p>¥ 95.00</p></div>
+    <div class="cell"><img src="images2/666.jpg"/>
+
+        <p>05</p></div>
+    <div class="cell"><img src="http://yl.sofedu.com/Public/images/images/p_006.jpg"/>
+
+        <p>06</p></div>
+    <div class="cell"><img src="http://yl.sofedu.com/Public/images/images/p_007.jpg"/>
+
+        <p>07</p></div>
+
+</div>
+<script>
+    var opt = {
+        getResource: function (index, render) {//index为已加载次数,render为渲染接口函数,接受一个dom集合或jquery对象作为参数。通过ajax等异步方法得到的数据可以传入该接口进行渲染，如 render(elem)
+            var html = '';
+            for (var i = 0; i < 20; i++) {
+                var k = i;
+                k = '0' + (String(k).length == 1 ? '0' : '') + k;
+                var src = "http://yl.sofedu.com/Public/images/images/p_" + k + ".jpg";
+                html += '<div class="cell"><img src="' + src + '" /><p>' + k + '</p></div>';
+            }
+            return $(html);
+        },
+        auto_imgHeight: true,
+        insert_type: 1
+    };
+    $('#optimizationlist-container').waterfall(opt);
+</script>
+</body>
+</html>
