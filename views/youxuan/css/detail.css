@@ -1,4 +1,4 @@
-/*¹«ÒæÏêÇéÒ³Í·²¿*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³Í·ï¿½ï¿½*/
 .donationheader{
     width: 100%;
     height: auto;
@@ -292,7 +292,7 @@
     margin-bottom:1.2rem;
 }
 
-/*¹«ÒæÏêÇéÒ³µ×²¿*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½×²ï¿½*/
 .detail-footer{
     position: fixed;
     bottom: 0;
@@ -313,7 +313,7 @@
     font-size: 18px;
     color: #fff;
 }
-/*·¢·Å¼ÇÂ¼*/
+/*ï¿½ï¿½ï¿½Å¼ï¿½Â¼*/
 .detail-donation-records section:nth-child(2n){
     background-color: #ffffff;
 }
@@ -360,9 +360,9 @@
     margin-top: .2rem;
 }
 
-/*¹«ÒæÏêÇéÒ³½áÊø*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½*/
 
-/*ÎÒÒª¾èÔùÒ³*/
+/*ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ò³*/
 .todonation-item{
     background-color: #fff;
     margin: 0 .2rem 0;
@@ -391,7 +391,7 @@
     padding: 0 0.8px;
     color: #fff;
 }
-.todonation-checked i.todonate-active{  /*Ñ¡ÖĞÊ±£¬ÑÕÉ«ºÍ±ß¿ò¸Ä±ä*/
+.todonation-checked i.todonate-active{  /*Ñ¡ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½É«ï¿½Í±ß¿ï¿½Ä±ï¿½*/
     color:#ff4965;
     border:1px solid #fff;
     font-size: 20px;
@@ -496,7 +496,7 @@
     color:#fff;
 }
 
-/*ÎÒµÄ¾èÔùÒ³*/
+/*ï¿½ÒµÄ¾ï¿½ï¿½ï¿½Ò³*/
 .my-donation-page>.donation-record,.donation-participants-main>.donation-record{
     background-color:#fff;
     border-radius: .2rem;
@@ -549,7 +549,7 @@
     line-height: .9rem;
     border-radius: 50%;
 }
-£®my-donation-page .donation-record>.donation-username,.donation-participants-main .donation-username{
+ï¿½ï¿½my-donation-page .donation-record>.donation-username,.donation-participants-main .donation-username{
     margin:0 .2rem .2rem .2rem;
     padding: .2rem 0;
     border-bottom: 1px dashed #dedede;
@@ -564,7 +564,7 @@
     height: .9rem;
     line-height: .9rem;
 }
-£®donation-participants-main .donation-record>div:first-child{
+ï¿½ï¿½donation-participants-main .donation-record>div:first-child{
     margin: 0 .2rem .2rem .2rem;
     padding: .2rem 0;
 }
@@ -609,7 +609,7 @@
     -webkit-line-clamp: 1!important;
     -webkit-box-orient: vertical!important;
 }
-/*²ÎÓëµÄ¹«ÒæÒ³Ãæ*/
+/*ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½Ò³ï¿½ï¿½*/
 .my-charity-list{
     height: 1.62rem;
     padding-top: .3rem;
@@ -677,7 +677,7 @@
 
 
 
-/*¹«ÒæÁĞ±íÒ³*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½Ò³*/
 .charityl .cnav{
     background-color:#fff;
     padding:.3rem .2rem;
@@ -829,7 +829,7 @@
     padding:0 .4rem;
     line-height:.6rem;
 }
-/*ÎÒÔŞ¹ıµÄÒ³Ãæ¸Ä°æ-¿ªÊ¼*/
+/*ï¿½ï¿½ï¿½Ş¹ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ä°ï¿½-ï¿½ï¿½Ê¼*/
 .myzan-product-list{
     margin-top: .2rem;
 }
@@ -855,11 +855,11 @@
     color: #ff4965;
     font-size: .6rem;
 }
-/*È¡ÏûÔŞ*/
+/*È¡ï¿½ï¿½ï¿½ï¿½*/
 .myzan-delete-zan{
     color: #dcdedd !important;
 }
-/*ÎÒµÄÔŞÒ³Ãæ-Í·²¿*/
+/*ï¿½Òµï¿½ï¿½ï¿½Ò³ï¿½ï¿½-Í·ï¿½ï¿½*/
 .myzan-page-wrapper{
     margin-top: 1rem;
     display: block;
@@ -897,4 +897,21 @@
 .myzan-list-content .donation-item{
     margin-left: .3rem;
 }
-/*ÎÒÔŞ¹ıµÄÒ³Ãæ¸Ä°æ-½áÊø*/
+/*ï¿½ï¿½ï¿½Ş¹ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ä°ï¿½-ï¿½ï¿½ï¿½ï¿½*/
+/*å¾€æœŸå›é¡¾é¡µé¢*/
+.optimization-history-timeleft{
+    color: #9fa0a0;
+    background-color: #efefef;
+    padding: 0 .15rem;
+    border-radius: .15rem;
+    letter-spacing: 1px;
+}
+.greatselect a{
+    position:relative;
+}
+.optimization-history-shiyong{
+    width: .65rem !important;
+    position: absolute;
+    top: 0;
+    left: .2rem;
+}
