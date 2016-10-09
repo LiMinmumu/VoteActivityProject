@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #EEE;
+            width:7.5rem;
+            overflow-x: hidden;
+        }
+        .grid {
+            width: 100%;
+        }
+        /* clearfix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        /* ---- grid-item ---- */
+        .grid-item,.grid-item--width2 {
+            width: 3.5rem;
+            height: auto;
+            float: left;
+            border-radius: 5px;
+        }
+        .grid-item img{
+            width: 100%;
+        }
+        p{
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /*  .grid-item--height2 { height: 200px; }
+         .grid-item--height3 { height: 260px; }
+          .grid-item--height4 { height: 360px; }*/
+
+    </style>
+    <script>
+        //设置html fontSize
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+
+<div class="grid">
+    <div class="grid-item"><img src="images2/111.jpg" /><p>书包书包</p> </div>
+    <div class="grid-item grid-item--width2"><img src="images2/222.jpg" /></div>
+    <div class="grid-item"><img src="images2/333.jpg" /></div>
+    <div class="grid-item"><img src="images2/444.jpg" /></div>
+    <div class="grid-item"><img src="images2/555.jpg" /></div>
+    <div class="grid-item"><img src="images2/666.jpg" /></div>
+    <div class="grid-item grid-item--width2"><img src="images2/222.jpg" /></div>
+    <div class="grid-item"><img src="images2/333.jpg" /></div>
+    <div class="grid-item"><img src="images2/444.jpg" /></div>
+    <div class="grid-item"><img src="images2/555.jpg" /></div>
+    <div class="grid-item"><img src="images2/666.jpg" /></div>
+
+</div>
+<script>
+    // external js: masonry.pkgd.js
+
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 20
+    });
+
+</script>
+</body>
+</html>

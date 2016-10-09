@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <style>
+        .container-fluid {
+            padding: 10px;
+        }
+        .box {
+            float: left;
+            width: 50%;
+        }
+        .box img {
+            max-width: 100%
+        }
+    </style>
+</head>
+<body>
+<div id="masonry" class="container-fluid">
+    <div class="box"><img src="images2/111.jpg"></div>
+    <div class="box"><img src="images2/222.jpg"></div>
+    <div class="box"><img src="images2/333.jpg"></div>
+    <div class="box"><img src="images2/444.jpg"></div>
+    <div class="box"><img src="images2/555.jpg"></div>
+    <div class="box"><img src="images2/666.jpg"></div>
+</div>
+</body>
+<script>
+    /*$(function() {
+        var $container = $('#masonry');
+        $container.imagesLoaded(function() {
+            $container.masonry({
+                itemSelector: '.box',
+                /!*gutter: 20,*!/
+                columnWidth:200,
+                isAnimated: true
+            });
+        });
+    });*/
+    $(function() {
+        var $objbox = $("#masonry");
+        var gutter = 25;
+        var centerFunc, $top0;
+        $objbox.imagesLoaded(function() {
+            $objbox.masonry({
+                itemSelector: "#masonry > .box",
+                gutter: gutter,
+                isAnimated: true
+            });
+            centerFunc = function() {
+                $top0 = $objbox.children("[style*='top: 0']");
+                $objbox.css("left", ($objbox.width() - ($top0.width() * $top0.length + gutter * ($top0.length - 1))) / 2).parent().css("overflow", "hidden");
+            };
+            centerFunc();
+        });
+        var tur = true;
+        $(window).resize(function() {
+            if (tur) {
+                setTimeout(function() {
+                            tur = true;
+                            centerFunc();
+                        },
+                        1000);
+                tur = false;
+            }
+        });
+    });
+</script>
+</html>
