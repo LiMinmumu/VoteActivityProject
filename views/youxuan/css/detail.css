@@ -1,4 +1,4 @@
-/*��������ҳͷ��*/
+/*公益详情页头部*/
 .donationheader{
     width: 100%;
     height: auto;
@@ -292,7 +292,7 @@
     margin-bottom:1.2rem;
 }
 
-/*��������ҳ�ײ�*/
+/*公益详情页底部*/
 .detail-footer{
     position: fixed;
     bottom: 0;
@@ -313,7 +313,7 @@
     font-size: 18px;
     color: #fff;
 }
-/*���ż�¼*/
+/*发放记录*/
 .detail-donation-records section:nth-child(2n){
     background-color: #ffffff;
 }
@@ -360,9 +360,9 @@
     margin-top: .2rem;
 }
 
-/*��������ҳ����*/
+/*公益详情页结束*/
 
-/*��Ҫ����ҳ*/
+/*我要捐赠页*/
 .todonation-item{
     background-color: #fff;
     margin: 0 .2rem 0;
@@ -391,7 +391,7 @@
     padding: 0 0.8px;
     color: #fff;
 }
-.todonation-checked i.todonate-active{  /*ѡ��ʱ����ɫ�ͱ߿�ı�*/
+.todonation-checked i.todonate-active{  /*选中时，颜色和边框改变*/
     color:#ff4965;
     border:1px solid #fff;
     font-size: 20px;
@@ -496,7 +496,7 @@
     color:#fff;
 }
 
-/*�ҵľ���ҳ*/
+/*我的捐赠页*/
 .my-donation-page>.donation-record,.donation-participants-main>.donation-record{
     background-color:#fff;
     border-radius: .2rem;
@@ -549,7 +549,7 @@
     line-height: .9rem;
     border-radius: 50%;
 }
-��my-donation-page .donation-record>.donation-username,.donation-participants-main .donation-username{
+．my-donation-page .donation-record>.donation-username,.donation-participants-main .donation-username{
     margin:0 .2rem .2rem .2rem;
     padding: .2rem 0;
     border-bottom: 1px dashed #dedede;
@@ -564,7 +564,7 @@
     height: .9rem;
     line-height: .9rem;
 }
-��donation-participants-main .donation-record>div:first-child{
+．donation-participants-main .donation-record>div:first-child{
     margin: 0 .2rem .2rem .2rem;
     padding: .2rem 0;
 }
@@ -609,7 +609,7 @@
     -webkit-line-clamp: 1!important;
     -webkit-box-orient: vertical!important;
 }
-/*����Ĺ���ҳ��*/
+/*参与的公益页面*/
 .my-charity-list{
     height: 1.62rem;
     padding-top: .3rem;
@@ -677,7 +677,7 @@
 
 
 
-/*�����б�ҳ*/
+/*公益列表页*/
 .charityl .cnav{
     background-color:#fff;
     padding:.3rem .2rem;
@@ -829,7 +829,7 @@
     padding:0 .4rem;
     line-height:.6rem;
 }
-/*���޹���ҳ��İ�-��ʼ*/
+/*我赞过的页面改版-开始*/
 .myzan-product-list{
     margin-top: .2rem;
 }
@@ -855,11 +855,11 @@
     color: #ff4965;
     font-size: .6rem;
 }
-/*ȡ����*/
+/*取消赞*/
 .myzan-delete-zan{
     color: #dcdedd !important;
 }
-/*�ҵ���ҳ��-ͷ��*/
+/*我的赞页面-头部*/
 .myzan-page-wrapper{
     margin-top: 1rem;
     display: block;
@@ -896,14 +896,57 @@
 }
 .myzan-list-content .donation-item{
     margin-left: .3rem;
+}/*我赞过的页面改版-结束*/
+/*发现好物*/
+.optimization-findgoods-container{
+    width:100%;
+    height:12rem;
+    background-color:#f7f8f8
 }
-/*���޹���ҳ��İ�-����*/
+.optimization-findgoods-list{
+    width: 92%;
+    margin: 0 auto;
+    padding-top:1.5rem;
+}
+.optimization-findgoods-list ul{
+    width:100%;
+    margin-left: .1rem;
+    list-style:none;
+}
+.optimization-findgoods-list ul li{
+    width:50%;
+    display:block;
+    float:left;
+
+}
+.optimization-findgoods-list ul li a{
+    display:block;
+}
+
+.optimization-findgoods-list ul li img{
+    width:96%;
+    border-radius:3px;
+}
+/*专题详情页-单个产品*/
+.optimization-specialdetail-container{
+    background-color:#fff;
+}
+.optimization-specialdetail-container .detail-desc p{
+    padding: .3rem;
+}
+.optimization-specialdetail-content img{
+    max-width:100%;
+}
+.optimization-specialdetail-content p{
+    font-size:14px;
+}
 /*往期回顾页面*/
 .optimization-history-timeleft{
+    font-size: 11px;
     color: #9fa0a0;
     background-color: #efefef;
-    padding: 0 .15rem;
-    border-radius: .15rem;
+    padding:.05rem .2rem;
+    border-radius: .5rem;
     letter-spacing: 1px;
 }
 .greatselect a{
@@ -914,4 +957,94 @@
     position: absolute;
     top: 0;
     left: .2rem;
+}
+.optimization-history-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1rem;
+    z-index: 99;
+}
+.optimization-history-nav ul{
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #fff;
+}
+.optimization-history-nav li{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.optimization-history-head{
+    height: .99rem;
+    display: inline-block;
+    font-size: 15px;
+}
+.optimization-history-active{
+    color: #ff4965;
+    border-bottom: 2px solid #ff4965;
+}
+.optimization-history-content{
+    margin-top:2.21rem;
+}
+.optimization-history-content .swiper-ad{
+    background-color: #fff;
+    padding-left: .15rem;
+    margin-top: -.4rem;
+}
+.optimization-history-content .swiper-ad img{
+    width:1.6rem;
+}
+.optimization-history-content ,greatselect .swiper-wrapper .swiper-slide a{
+    margin-bottom:0 !important;
+}
+/*往期回顾样式结束*/
+/*优选频道列表页样式开始*/
+.optimization-categorylist .content-headerMenu .item>div{
+    width:39px;
+    height: 39px;
+    background: url(../images2/categorylist-index.png) center no-repeat !important;
+    background-size:335px 38px !important;
+}
+.optimization-categorylist .content-headerMenu .item .article{
+    background-position: 0 0 !important;
+}
+.optimization-categorylist .content-headerMenu .item .goods{
+    background-position: -74px 0 !important;
+}
+.optimization-categorylist .content-headerMenu .item .charitable{
+    background-position: -222px 0 !important;
+}
+.optimization-categorylist .content-headerMenu .item .leave{
+    background-position: -296px 0 !important;
+}
+.optimization-categorylist-title{
+    height: .8rem;
+    padding: 0 .2rem;
+    line-height: .8rem;
+    margin-top: .2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #dcdddd;
+}
+.optimization-categorylist-title h2{
+    display:inline-block;
+    font-size:15px;
+}
+.optimization-categorylist-title i{
+    float:right;
+}
+.optimization-categorylist-title span{
+    font-size:12px;
+    border: 1px solid #9fa0a0;
+    padding: 0 2px;
+    margin-right: 2px;
+}
+.optimization-categorylist-specialwidth{
+    margin-left:2px !important;
+}
+.optimization-categorylist-specialcolor{
+    border: 1px solid #ff4965 !important;
+    padding: 0 2px;
+    margin-left: 2px;
 }

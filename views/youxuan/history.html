@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
     <meta name="format-detection" content="telephone=no">
     <title>参与的公益</title>
-    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/main.min.css"/>
     <link rel="stylesheet" href="css/detail.css">
     <script src="js/jquery-1.11.3.min.js"></script>
     <style>
@@ -30,31 +30,71 @@
     </style>
 </head>
 <body>
-<section class="greatselect">
-    <a href="/Optimization/Legobricks.html" class="ui-link">
-        <img src="images2/optimization-history-jimu.jpg">
-        <img class="optimization-history-shiyong" src="images2/optimization-history-shiyong.png" />
-        <p>
-            <span class="optimization-history-timeleft">仅剩：3天12小时25分</span>
-            <span style="float:right;color:#ff4965;">¥142.00 <span style="font-size:12px;color:#9fa0a0;text-decoration:line-through;">¥199.00</span></span>
-        </p>
-    </a>
-</section>
-<section class="greatselect">
-    <a href="/Optimization/Legobricks.html" class="ui-link">
-        <img src="images2/optimization-history-jimu.jpg">
-        <img class="optimization-history-shiyong" src="images2/optimization-history-new.png" />
-        <p>
-            <span class="optimization-history-timeleft">仅剩：3天12小时25分</span>
-            <span style="float:right;color:#ff4965;">¥142.00 <span style="font-size:12px;color:#9fa0a0;text-decoration:line-through;">¥199.00</span></span>
-        </p>
-    </a>
-</section>
+<div class="optimization-history-nav toheader">
+    <ul>
+        <li class="optimization-history-current"><span class="optimization-history-head optimization-history-active">本期精选</span></li>
+        <li class="optimization-history-history"><span class="optimization-history-head">往期回顾</span></li>
+    </ul>
+</div>
+<div class="optimization-history-content">
+    <div id="optimization-history-current">
+        <section class="greatselect">
+            <a href="/Optimization/Legobricks.html" class="ui-link">
+                <img src="images2/optimization-history-jimu.jpg">
+                <img class="optimization-history-shiyong" src="images2/optimization-history-shiyong.png"/>
+
+                <p>
+                    <span class="optimization-history-timeleft">仅剩：3天12小时25分</span>
+                <span style="float:right;color:#ff4965;font-size:20px;">¥142.00 <span
+                        style="font-size:13px;color:#9fa0a0;text-decoration:line-through;">¥199.00</span></span>
+                </p>
+            </a>
+        </section>
+        <section class="greatselect">
+            <a href="/Optimization/Legobricks.html" class="ui-link">
+                <img src="images2/optimization-history-jimu.jpg">
+                <img class="optimization-history-shiyong" src="images2/optimization-history-new.png"/>
+
+                <p>
+                    <span class="optimization-history-timeleft">仅剩：3天12小时25分</span>
+                <span style="float:right;color:#ff4965;font-size:20px;">¥142.00 <span
+                        style="font-size:13px;color:#9fa0a0;text-decoration:line-through;">¥199.00</span></span>
+                </p>
+            </a>
+        </section>
+    </div>
+    <div id="optimization-history-history" style="display: none ">
+        <section class="greatselect">
+            <a href="/Optimization/Legobricks.html" class="ui-link">
+                <img src="images2/optimization-history-jimu.jpg">
+                <img class="optimization-history-shiyong" src="images2/optimization-history-new.png"/>
+
+                <p>
+                    <span class="optimization-history-timeleft">仅剩：3天12小时25分</span>
+                <span style="float:right;color:#ff4965;font-size:20px;">¥142.00 <span
+                        style="font-size:13px;color:#9fa0a0;text-decoration:line-through;">¥199.00</span></span>
+                </p>
+            </a>
+        </section>
+        <section class="greatselect">
+            <a href="/Optimization/Legobricks.html" class="ui-link">
+                <img src="images2/optimization-history-jimu.jpg">
+                <img class="optimization-history-shiyong" src="images2/optimization-history-shiyong.png"/>
+
+                <p>
+                    <span class="optimization-history-timeleft">仅剩：3天12小时25分</span>
+                <span style="float:right;color:#ff4965;font-size:20px;">¥142.00 <span
+                        style="font-size:13px;color:#9fa0a0;text-decoration:line-through;">¥199.00</span></span>
+                </p>
+            </a>
+        </section>
+    </div>
+</div>
 <script>
-    /*头部商品-说说-闲置的点击切换*/
-    $(".myzan-page-wrapper>ul>li>span").click(function(){
-        $(this).addClass("myzan-active").parent().siblings().children().removeClass("myzan-active");
-        var $showClass= "#"+$(this).parent().attr("class");
+    /*优选本期/往期回顾头部-点击切换*/
+    $(".optimization-history-nav>ul>li>span").click(function () {
+        $(this).addClass("optimization-history-active").parent().siblings().children().removeClass("optimization-history-active");
+        var $showClass = "#" + $(this).parent().attr("class");
         $($showClass).show().siblings().hide();
     })
 </script>
@@ -86,3 +126,14 @@
 </script>
 </body>
 </html>
+<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 375px;">
+    <a href="/Charitable/Detail19.html" data-ajax="false" class="ui-link">
+        <img src="http://cdn.other.img.95laibei.com/161008174625617858.jpg" alt="公益宣传">
+    </a>
+</div>
+
+<div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 375px;">
+    <a href="/Activepage/KoreaChair.html" data-ajax="false" class="ui-link">
+        <img src="http://cdn.other.img.95laibei.com/161008150257793070.jpg" alt="韩国新品">
+    </a>
+</div>
