@@ -1048,3 +1048,71 @@
     padding: 0 2px;
     margin-left: 2px;
 }
+.categorylist-goods-item{
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
+    margin: 0 auto;
+    padding: 0 .2rem;
+    text-align: center;
+    background-color: #fff;
+    color:#000;
+    padding-top: .3rem;
+}
+.categorylist-goods-item img{
+    max-width: 100%;
+}
+.categorylist-goods-normalprice{
+    color:#595757;
+    font-size:14px;
+}
+.categorylist-goods-previousprice{
+    font-size: 11px;
+    color: #9fa0a0;
+    text-decoration: line-through;
+}
+.categorylist-goods-discount{
+    position: relative;
+    top: 0.2rem;
+    margin: 0 auto .4rem;
+    background-color: #ff4965;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding: 2px 0;
+    font-size: 13px;
+    width: 90%;
+}
+.categorylist-goods-discountno{
+    position: absolute;
+    display: block;
+    font-size: 22px;
+    left: 0.24rem;
+    top: -.16rem;
+    background-color: #ff4965;
+    border-radius: .2rem;
+    width: .4rem;
+}
+.categorylist-division{
+
+}
+.categorylist-division-content{
+    float: left;
+    font-size: .3rem;
+    height: .9rem;
+    width: 1.65rem;
+    line-height: .8rem;
+    text-align: center;
+}
+.categorylist-division-lline,.categorylist-division-rline{
+    float: left;
+    display: inline-block;
+    line-height: 0;
+    width: 2.75rem;
+    border-bottom: 1px solid #c9caca;
+}
+.categorylist-division-lline{
+    margin: .45rem .16rem 0 0;
+}
+.categorylist-division-rline{
+    margin: .45rem 0 0 .16rem;
+}
