@@ -75,32 +75,34 @@
 <div class="masonry-wrapper optimization-list-category-list">
 	<ul class="masonry">
 		<li class="masonry-item">
-			<img src="categoryList1.jpg" />
+			<a href="#">
+			<img  src="loading.gif" data-original="categoryList1.jpg" />
 			<p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
 			<p class="optimization-list-category-price">¥ 95.00</p>
-			</li>
+			</a>
+		</li>
 		<li class="masonry-item">
-			<img src="categoryList2.jpg" />
+			<img  src="loading.gif" data-original="categoryList2.jpg" />
 			<p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
 			<p class="optimization-list-category-price">¥ 95.00</p></li>
 		<li class="masonry-item">
-			<img src="categoryList3.jpg" />
+			<img  src="loading.gif" data-original="categoryList3.jpg" />
 			<p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
 			<p class="optimization-list-category-price">¥ 95.00</p></li>
 		<li class="masonry-item">
-			<img src="categoryList4.jpg" />
+			<img  src="loading.gif" data-original="categoryList4.jpg" />
 			<p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
 			<p class="optimization-list-category-price">¥ 95.00</p></li>
 		<li class="masonry-item">
-			<img src="categoryList5.jpg" />
+			<img  src="loading.gif" data-original="categoryList5.jpg" />
 			<p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
 			<p class="optimization-list-category-price">¥ 95.00</p></li>
 		<li class="masonry-item">
-			<img src="categoryList6.jpg" />
+			<img  src="loading.gif" data-original="categoryList6.jpg" />
 			<p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
 			<p class="optimization-list-category-price">¥ 95.00</p></li>
 		<li class="masonry-item">
-			<img src="categoryList3.jpg" />
+			<img  src="loading.gif" data-original="categoryList3.jpg" />
 			<p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
 			<p class="optimization-list-category-price">¥ 95.00</p></li>
 	</ul>
@@ -108,8 +110,30 @@
 
 <script type="text/javascript" src="jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="masonry.min.js"></script>
+<script type="text/javascript" src="jquery.lazyload.min.js"></script>
 
 <script>
+	$(function() {
+
+		f_masonry();
+
+		$("img").lazyload({
+			effect:"fadeIn",
+			failurelimit:400,
+			load:f_masonry
+		});
+	});
+
+	function f_masonry() {
+		$('.masonry').masonry({
+			gutterWidth: 5,
+			itemSelector: '.masonry-item',
+			/*isAnimated: true*/
+		});
+	}
+
+</script>
+<!--<script>
 $(function() {
 	f_masonry();
 });
@@ -121,6 +145,6 @@ function f_masonry() {
 		isAnimated: true
 	});
 }
-</script>
+</script>-->
 </body>
 </html>
