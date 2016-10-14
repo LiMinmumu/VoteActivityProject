@@ -9,8 +9,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
     <meta name="format-detection" content="telephone=no">
     <title></title>
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="jquery-2.2.4.min.js"></script>
+    <script src="masonry.pkgd.min.js"></script>
     <style>
         .container-fluid {
             padding: 10px;
@@ -67,43 +67,16 @@
 </body>
 <script>
     $(function() {
-        var $container = $('#masonry');
+        var $container = $('.masonry-wrapper');
         $container.imagesLoaded(function() {
             $container.masonry({
-                itemSelector: '.box',
+                itemSelector: '.masonry-item',
                 /*gutter: 20,*/
                 columnWidth:200,
                 isAnimated: true
             });
         });
     });
-  /*  $(function() {
-        var $objbox = $("#masonry");
-        var gutter = 25;
-        var centerFunc, $top0;
-        $objbox.imagesLoaded(function() {
-            $objbox.masonry({
-                itemSelector: "#masonry > .box",
-                gutter: gutter,
-                isAnimated: true
-            });
-            centerFunc = function() {
-                $top0 = $objbox.children("[style*='top: 0']");
-                $objbox.css("left", ($objbox.width() - ($top0.width() * $top0.length + gutter * ($top0.length - 1))) / 2).parent().css("overflow", "hidden");
-            };
-            centerFunc();
-        });
-        var tur = true;
-        $(window).resize(function() {
-            if (tur) {
-                setTimeout(function() {
-                            tur = true;
-                            centerFunc();
-                        },
-                        1000);
-                tur = false;
-            }
-        });
-    });*/
+
 </script>
 </html>
