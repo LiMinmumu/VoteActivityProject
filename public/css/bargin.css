@@ -1,0 +1,116 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#ff5075 !important;font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:16px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#fff!important; text-decoration:none; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;}
+
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+
+.bargin-wrapper{
+    overflow: hidden;
+    background: #ff5075;
+}
+.bargin-banner{
+    position:relative;
+}
+.bargin-banner img{
+    width:100%;
+}
+.countdown{
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.countdown p{
+    margin-bottom: 10px;
+    color:#fffc73;
+}
+.countdown .position{
+    background-color:#fff;
+    padding:4px 4px;
+    color:#ff7196;
+    border-radius:2px;
+}
+.gift-package-list{
+    padding: 0 .2rem;
+}
+.gift-package-item{
+    position: relative;
+    margin:.2rem auto;
+    padding: .2rem;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.gift-package-word{
+    margin-left: 2.4rem;
+}
+.gift-package-item img{
+    float:left;
+    width: 2.2rem;
+    border-radius: 5px;
+}
+.gift-package-item-title{
+    font-size: 15px;
+    font-weight:bold;
+    color:#3e3a39;
+    width: 4rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.gift-package-item-desc{
+    font-size: 13px;
+    color:#9fa0a0;
+    width: 2.8rem;
+    height: .74rem;
+    margin-top:.1rem;
+    white-space:nowrap;
+}
+.gift-package-item-oldprice{
+    font-size: 14px;
+    color:#9fa0a0;
+    text-decoration: line-through;
+
+}
+.gift-package-item-price{
+    font-size: 20px;
+    color:#ff4965;
+}
+.gift-package-item-buynow{
+    position: absolute;
+    right: .3rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    bottom: .3rem;
+    font-size: .28rem;
+    background-color: #ff4965;
+    text-align: center;
+    line-height: 1.3;
+}
+.gift-package-item-buynow-word{
+    position:relative;
+    top:.1rem;
+}
+.gift-package-goods{
+    margin-top:.7rem;
+}
+.gift-pakage-phone>div,.gift-pakage-phone>div{
+    border: 0;
+    border-radius: 0;
+    text-shadow: none !important;
+    margin: 0;
+    width:5.3rem;
+}
+.bargin-product-list{
+    margin-top: -.25rem;
+}

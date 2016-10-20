@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>新人专享大礼包</title>
+    <link href="../../../dist/main.min.css" rel="stylesheet" />
+    <script src="../../../dist/common.min.js"></script>
+    <script src="../../../dist/main.min.js"></script>
+    <script>
+        //设置html fontSize
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+</head>
+<body>
+<div data-role="page" class="laibei_page" data-module="page">
+    <link rel="stylesheet" href="css/gift.css">
+    <script src="index.js"></script>
+    <div class="gift-package-container">
+        <section class="gift-package-banner">
+            <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/giftpackage-banner.jpg" />
+        </section>
+        <section class="gift-package-info">
+            <div class="gift-pakage-phone">
+                <input type="tel" oninput="Global_CommonHelper.CheckOnlyNumber(this, 11)" data-role="none" id="gift_tel" placeholder="请输入手机号" />
+            </div>
+            <div class="gift-pakage-phone gift-pakage-valicode clearfix">
+                <input oninput="Global_CommonHelper.CheckOnlyNumber(this, 4)" type="tel" data-role="none" id="gift_code" placeholder="请输入验证码" />
+                <button id="sendVerifyCode"  data-role="none" class="gift-pakage-getcode">获取验证码</button>
+            </div>
+            <a data-role="none" id="gift_submit" class="gift-pakage-getnow">立即领取</a>
+        </section>
+        <section class="gift-package-hot">
+            <div class="gift-package-titlewrapper">
+                <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-title1.png" />
+            </div>
+            <div class="gift-package-list">
+                <section class="gift-package-item clearfix">
+                    <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-jimuj.jpg" />
+                    <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
+                    <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽<br />提高动手能力</p>
+                    <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
+                    <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
+                    <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4448">立即购买</a>
+                </section>
+            </div>
+        </section>
+        <section class="gift-package-hot gift-package-goods">
+            <div class="gift-package-titlewrapper">
+                <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-title2.png" />
+            </div>
+            <div class="gift-package-list">
+                <section class="gift-package-item clearfix">
+                    <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-jimuj.jpg" />
+                    <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
+                    <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽<br/>提高动手能力</p>
+                    <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
+                    <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
+                    <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4448">立即购买</a>
+                </section>
+            </div>
+            <div class="gift-package-list">
+                <section class="gift-package-item clearfix">
+                    <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-ppy.jpg" />
+                    <p class="gift-package-item-title gift-package-word">跑跑蚁早教通</p>
+                    <p class="gift-package-item-desc gift-package-word">会跳舞的早教机<br/>万千妈妈信赖的选择</p>
+                    <p class="gift-package-item-oldprice gift-package-word">¥299.00</p>
+                    <p class="gift-package-item-price gift-package-word">¥ 149.00</p>
+                    <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4454">立即购买</a>
+                </section>
+            </div>
+            <div class="gift-package-list">
+                <section class="gift-package-item clearfix">
+                    <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-naip.jpg" />
+                    <p class="gift-package-item-title gift-package-word">布朗博士奶瓶</p>
+                    <p class="gift-package-item-desc gift-package-word">妈妈母乳般的触感<br/>耐热更抗摔</p>
+                    <p class="gift-package-item-oldprice gift-package-word">¥142.00</p>
+                    <p class="gift-package-item-price gift-package-word">¥ 118.00</p>
+                    <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4445">立即购买</a>
+                </section>
+            </div>
+            <div class="gift-package-list">
+                <section class="gift-package-item clearfix">
+                    <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-huaban.jpg" />
+                    <p class="gift-package-item-title gift-package-word">小泰克滑板车</p>
+                    <p class="gift-package-item-desc gift-package-word">环保材质<br/>锻炼宝宝身体，协调平衡能力</p>
+                    <p class="gift-package-item-oldprice gift-package-word">¥399.00</p>
+                    <p class="gift-package-item-price gift-package-word">¥ 239.00</p>
+                    <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4463">立即购买</a>
+                </section>
+            </div>
+            <div class="gift-package-list">
+                <section class="gift-package-item clearfix">
+                    <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-qixing.jpg" />
+                    <p class="gift-package-item-title gift-package-word">小飞人骑行车</p>
+                    <p class="gift-package-item-desc gift-package-word">学步骑行两不误<br/>宝宝好朋友，妈妈好帮手</p>
+                    <p class="gift-package-item-oldprice gift-package-word">¥499.00</p>
+                    <p class="gift-package-item-price gift-package-word">¥ 189.00</p>
+                    <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4447">立即购买</a>
+                </section>
+            </div>
+            <div class="gift-package-list">
+                <section class="gift-package-item clearfix">
+                    <img src="http://cdn.sys.img.95laibei.com/Activitys/2016/xrzx/gift-pakage-qiche.jpg" />
+                    <p class="gift-package-item-title gift-package-word">皇室迷你小汽车</p>
+                    <p class="gift-package-item-desc gift-package-word">造型可爱有更多种类选择<br/>边缘光滑宝宝啃咬不伤皮肤</p>
+                    <p class="gift-package-item-oldprice gift-package-word">¥96.00</p>
+                    <p class="gift-package-item-price gift-package-word">¥ 69.00</p>
+                    <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4462">立即购买</a>
+                </section>
+            </div>
+        </section>
+    </div>
+    <script>
+        function InitPagebeforeCreate() {
+
+        }
+        function InitPageShow() {
+            Index.PageInit();
+        }
+    </script>
+</div>
+<script type="text/javascript">
+    (function (doc, win) {
+        $(document).on("pagebeforecreate", function () {
+            InitPagebeforeCreate();
+        });
+        $(document).on("pageshow", function () {
+            $(".laibei_page").removeClass("ui-page");
+            InitPageShow();
+            Global_ReturnHelper.SetReturnUrl();
+            Global_ReturnHelper.IsDisabled = false;
+
+            Global_SiteAccessLogHelper.SetAppQueryString();
+            setTimeout(function () {
+                Global_SiteAccessLogHelper.GetSiteAccessInfo();
+            }, 3000);
+        });
+        $(document).on("pageinit", function () {
+
+        });
+        $(document).on("pagehide", function () {
+            if ($('.laibei_page').length > 1) {
+                $('.laibei_page:first').remove();
+            }
+        });
+        $(document).ready(function () {
+            Global_SiteAccessLogHelper.SaveAppInfo();
+        });
+    })(document, window);
+</script>
+</body>
+</html>

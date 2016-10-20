@@ -11,9 +11,9 @@ var router = express.Router();
     res.render('workv2/register')
   });
     /*参加活动的用户列表页*/
-  router.get('/list',function(req,res,next){
+  /*router.get('/list',function(req,res,next){
     res.render('workv2/ranklist')
-  });
+  });*/
     /*个人展示页*/
   router.get('/profile',function(req,res,next){
     res.render('workv2/profile')
@@ -40,4 +40,16 @@ router.get('/todonate',function(req,res,next){
   res.render('workv2/todonate')
 });
 
+
+router.get("/list",function(req,res,next){
+  res.render('index')
+});
+/*新人专享大礼包*/
+router.get('/giftpackage',function(req,res,next){
+  res.render('NewSpecialGiftPackage')
+});
+/*双十一砍价活动*/
+router.get('/bargin',function(req,res,next){
+  res.render('bargin')
+});
 module.exports = router;
