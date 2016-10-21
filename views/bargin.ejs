@@ -11,10 +11,10 @@
     <title>双十一砍价活动</title>
     <link  rel="stylesheet" href="/css/main.min.css" />
     <link rel="stylesheet" href="/css/bargin.css">
-    <!--<script src="/js/common.min.js"></script>
-    <script src="/js/main.min.js"></script>-->
-    <script src="/js/jquery-1.11.3.min.js"></script>
-    <script src="/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/js/common.min.js"></script>
+    <script src="/js/main.min.js"></script>
+    <!--<script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/jquery.mobile-1.4.5.min.js"></script>-->
     <script>
         //设置html fontSize
         (function (doc, win) {
@@ -30,7 +30,18 @@
             doc.addEventListener('DOMContentLoaded', recalc, false);
         })(document, window);
     </script>
-
+    <style>
+        #grad1 {
+            position:absolute;
+            /*z-index: -1;*/
+            height: 150px;
+            width: 200px;
+            background: -webkit-radial-gradient(red, yellow, green); /* Safari 5.1 - 6.0 */
+            background: -o-radial-gradient(red, yellow, green); /* Opera 11.6 - 12.0 */
+            background: -moz-radial-gradient(red, yellow, green); /* Firefox 3.6 - 15 */
+            background: radial-gradient(red, yellow, green); /* 标准的语法（必须放在最后） */
+        }
+    </style>
 </head>
 <body>
 <div class="bargin-wrapper">
@@ -69,10 +80,32 @@
                 <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽<br />提高动手能力</p>
                 <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
                 <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
-                <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4448">
+                <a class="gift-package-item-buynow bargin-product-purchase" href="http://mweb.95laibei.com/Product/Detail/4448">
                     <span class="gift-package-item-buynow-word">立即</span><br />
                     <span class="gift-package-item-buynow-word">购买</span>
                 </a>
+                <a class="gift-package-item-buynow" href="#">
+                    <span class="gift-package-item-buynow-word bargin-purchase">砍</span>
+                </a>
+                <p class="bargin-price">消费8贝壳/次</p>
+            </section>
+        </div>
+        <div id="grad1"></div>
+        <div class="gift-package-list">
+            <section class="gift-package-item clearfix">
+                <img src="/images3/gift-pakage-jimuj.jpg" />
+                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
+                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽<br />提高动手能力</p>
+                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
+                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
+                <a class="gift-package-item-buynow bargin-product-purchase" href="http://mweb.95laibei.com/Product/Detail/4448">
+                    <span class="gift-package-item-buynow-word">立即</span><br />
+                    <span class="gift-package-item-buynow-word">购买</span>
+                </a>
+                <a class="gift-package-item-buynow" href="#">
+                    <span class="gift-package-item-buynow-word bargin-purchase">砍</span>
+                </a>
+                <p class="bargin-price">消费8贝壳/次</p>
             </section>
         </div>
         <div class="gift-package-list">
@@ -82,54 +115,22 @@
                 <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽<br />提高动手能力</p>
                 <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
                 <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
-                <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4448">
+                <a class="gift-package-item-buynow bargin-product-purchase" href="http://mweb.95laibei.com/Product/Detail/4448">
                     <span class="gift-package-item-buynow-word">立即</span><br />
                     <span class="gift-package-item-buynow-word">购买</span>
                 </a>
+                <a class="gift-package-item-buynow" href="#">
+                    <span class="gift-package-item-buynow-word bargin-purchase">砍</span>
+                </a>
+                <p class="bargin-price">消费8贝壳/次</p>
             </section>
         </div>
-        <div class="gift-package-list">
-            <section class="gift-package-item clearfix">
-                <img src="/images3/gift-pakage-jimuj.jpg" />
-                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
-                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽<br />提高动手能力</p>
-                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
-                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
-                <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4448">
-                    <span class="gift-package-item-buynow-word">立即</span><br />
-                    <span class="gift-package-item-buynow-word">购买</span>
-                </a>
-            </section>
-        </div>
-        <div class="gift-package-list">
-            <section class="gift-package-item clearfix">
-                <img src="/images3/gift-pakage-jimuj.jpg" />
-                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
-                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽<br />提高动手能力</p>
-                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
-                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
-                <a class="gift-package-item-buynow" href="http://mweb.95laibei.com/Product/Detail/4448">
-                    <span class="gift-package-item-buynow-word">立即</span><br />
-                    <span class="gift-package-item-buynow-word">购买</span>
-                </a>
-            </section>
-        </div>
-        <div class="gift-package-list">
-            <section class="gift-package-item clearfix">
-                <img src="/images3/gift-pakage-jimuj.jpg" />
-                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
-                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽<br />提高动手能力</p>
-                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
-                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
-                <a class="gift-package-item-buynow" href="#myPopup1" data-rel="popup" class="ui-btn" data-position-to="window">
-                    <!--<span class="gift-package-item-buynow-word">立即</span><br />
-                    <span class="gift-package-item-buynow-word">购买</span>-->
-                    立即购买
-                </a>
-            </section>
-            <div data-role="popup" id="myPopup1" class="ui-content">
-                <p>我显示在窗口的中间部分。</p>
-            </div>
+        <div class="bargin-desc">
+            <div class="bargin-desc-title"><span>活动规则</span></div>
+            <p>一、每人每天可砍价2次 ，每砍一次需要消耗8贝壳；</p>
+            <p>二、每天可以邀请10位不同的好友帮忙砍价，每位好友对不同商品有一次砍价机会；</p>
+            <p>三、请仔细阅读使用规则，如果有疑问，可直接联系客服专线：0571-86537095；</p>
+            <p>四、此活动为概率中奖，金额有限，祝好运！</p>
         </div>
     </section>
 </div>
