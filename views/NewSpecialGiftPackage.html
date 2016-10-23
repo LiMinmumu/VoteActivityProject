@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>新人专享大礼包</title>
+    <link rel="stylesheet" href="css/gift.css">
+</head>
+<body>
+<div class="gift-package-container">
+    <section class="gift-package-banner">
+        <img src="images/giftpackage-banner.jpg"/>
+    </section>
+    <section class="gift-package-info">
+        <div class="gift-pakage-phone">
+            <input type="number" placeholder="请输入手机号"/>
+        </div>
+        <div class="gift-pakage-phone gift-pakage-valicode clearfix">
+            <input type="number" placeholder="请输入验证码"/>
+            <a href="#" class="gift-pakage-getcode">获取验证码</a>
+        </div>
+        <a href="#" class="gift-pakage-getnow">立即领取</a>
+    </section>
+    <section class="gift-package-hot">
+        <div class="gift-package-titlewrapper">
+            <img src="images/gift-pakage-title1.png"/>
+        </div>
+        <div class="gift-package-list">
+            <section class="gift-package-item clearfix">
+                <img src="images/charity-joinedcharity.jpg" />
+                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
+                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽提高动手能力</p>
+                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
+                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
+                <a class="gift-package-item-buynow">立即购买</a>
+            </section>
+        </div>
+    </section>
+    <section class="gift-package-hot gift-package-goods">
+        <div class="gift-package-titlewrapper">
+            <img src="images/gift-pakage-title2.png"/>
+        </div>
+        <div class="gift-package-list">
+            <section class="gift-package-item clearfix">
+                <img src="images/charity-joinedcharity.jpg" />
+                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
+                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽提高动手能力</p>
+                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
+                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
+                <a class="gift-package-item-buynow">立即购买</a>
+            </section>
+        </div>
+        <div class="gift-package-list">
+            <section class="gift-package-item clearfix">
+                <img src="images/charity-joinedcharity.jpg" />
+                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
+                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽提高动手能力</p>
+                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
+                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
+                <a class="gift-package-item-buynow">立即购买</a>
+            </section>
+        </div>
+        <div class="gift-package-list">
+            <section class="gift-package-item clearfix">
+                <img src="images/charity-joinedcharity.jpg" />
+                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
+                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽提高动手能力</p>
+                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
+                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
+                <a class="gift-package-item-buynow">立即购买</a>
+            </section>
+        </div>
+        <div class="gift-package-list">
+            <section class="gift-package-item clearfix">
+                <img src="images/charity-joinedcharity.jpg" />
+                <p class="gift-package-item-title gift-package-word">LEGO乐高积木</p>
+                <p class="gift-package-item-desc gift-package-word">安全无毒防吞咽提高动手能力</p>
+                <p class="gift-package-item-oldprice gift-package-word">¥229.00</p>
+                <p class="gift-package-item-price gift-package-word">¥ 162.00</p>
+                <a class="gift-package-item-buynow">立即购买</a>
+            </section>
+        </div>
+    </section>
+</div>
+<script>
+    //设置html fontSize
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

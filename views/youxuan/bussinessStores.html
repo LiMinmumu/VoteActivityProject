@@ -1,0 +1,122 @@
+
+
+
+<section class="offcenter" style="background-image:url(../../Content/Images/bussinessstore-bgimg.jpg);background-size: cover;">
+    <div class="clearfix">
+        <a href="javascript:void(0)" onclick="Global_ReturnHelper.ReturnHistoryPage()" class="iconfont iReturnHistoryEvent back ui-link"></a>
+        <a href="javascript:void(0)" class="iconfont share ui-link"></a>
+        <a href="javascript:void(0)" id="im-messagelink" class="iconfont message ui-link" data-msg=""></a>
+    </div>
+    <p class="avatar personal businesslog"><a href="#" class="ui-link"><img src="~/Content/Images/detail-portrait.jpg"></a></p>
+    <p >baby辅食</p>
+    <p class="btn">
+        <a href="javascript:void(0)" class="uncancern ui-link">+ 关注</a>
+        <a href="javascript:void(0)" class="ui-link">聊一聊</a>
+    </p>
+</section>
+<section class="bussinessstore-company-achievement clearfix">
+    <ul>
+        <li>
+            <img src="~/Content/Images/bussinessstore-verify.png" />
+            <span>认证企业</span>
+        </li>
+        <li>
+            <img src="~/Content/Images/bussinessstore-deal.png" />
+            <span>担保交易</span>
+        </li>
+        <li>
+            <img src="~/Content/Images/bussinessstore-return.png" />
+            <span>7天退货</span>
+        </li>
+    </ul>
+</section>
+<section class="bussinessstore-company-word">
+    <div class="bussinessstore-company-wordstitle">
+        <p>他的说说</p>
+        <a href="#"><i class="iconfont">&#xe60b;</i></a>
+    </div>
+    <div class="bussinessstore-company-wordsdetail clearfix">
+        <img src="~/Content/Images/charity-joinedcharity.jpg" />
+        <p>2015年德淘买的，当时买了好几个，现在宝宝用不上了，低价转宝宝用不上了，低价转宝宝用不上了，低价转。</p>
+    </div>
+</section>
+<section class="bussinessstore-product-all">
+    <div class="bussinessstore-product-title">
+        <p>全部商品</p>
+    </div>
+    <div class="bussinessstore-product-kind clearfix">
+        <ul>
+            <li style="width: 28%;"><a href="#" class="bussinessstore-active"><span>最新</span></a></li>
+            <li style="width: 30%;"><a href="#"><span>销量</span></a></li>
+            <li style="width: 17%;"><a href="#"><span>价格<i class="iconfont">&#xe617;</i></span></a></li>
+            @*<li style="width: 17%;"><a href="#"><span>价格<i class="iconfont">&#xe64f;</i></span></a></li>*@
+            <li><a href="#"><span>促销</span></a></li>
+        </ul>
+    </div>
+</section>
+<section class="bussinessstore-product-detail">
+    <div class="masonry-wrapper optimization-list-category-list" style="margin-top:0">
+        <ul class="masonry">
+            <li class="masonry-item">
+                <a href="/Article/list">
+                    <img src="~/Content/Images/sending.gif" data-original="/Content/Images/categoryList1.jpg" />
+                    <p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+                    <p class="optimization-list-category-price">¥ 95.00</p>
+                </a>
+            </li>
+            <li class="masonry-item">
+                <img src="~/Content/Images/sending.gif" data-original="/Content/Images/categoryList2.jpg" />
+                <p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+                <p class="optimization-list-category-price">¥ 95.00</p>
+            </li>
+            <li class="masonry-item">
+                <img src="~/Content/Images/sending.gif" data-original="/Content/Images/categoryList3.jpg" />
+                <p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+                <p class="optimization-list-category-price">¥ 95.00</p>
+            </li>
+            <li class="masonry-item">
+                <img src="~/Content/Images/sending.gif" data-original="/Content/Images/categoryList4.jpg" />
+                <p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+                <p class="optimization-list-category-price">¥ 95.00</p>
+            </li>
+            <li class="masonry-item">
+                <img src="~/Content/Images/sending.gif" data-original="/Content/Images/categoryList5.jpg" />
+                <p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+                <p class="optimization-list-category-price">¥ 95.00</p>
+            </li>
+            <li class="masonry-item">
+                <img src="~/Content/Images/sending.gif" data-original="/Content/Images/categoryList6.jpg" />
+                <p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+                <p class="optimization-list-category-price">¥ 95.00</p>
+            </li>
+            <li class="masonry-item">
+                <img src="~/Content/Images/sending.gif" data-original="/Content/Images/categoryList3.jpg" />
+                <p class="optimization-list-category-desc">宝宝哈衣长袖睡衣爬爬服3个月0-1岁</p>
+                <p class="optimization-list-category-price">¥ 95.00</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script>
+    function InitPagebeforeCreate() {
+
+    }
+    function InitPageShow() {
+        $(function () {
+            masonry();
+            $("img").lazyload({
+                effect: "fadeIn",
+                failurelimit: 400,
+                load: masonry
+            });
+        });
+
+        function masonry() {
+            $('.masonry').masonry({
+                gutterWidth: 5,
+                itemSelector: '.masonry-item'
+            });
+        }
+    }
+</script>

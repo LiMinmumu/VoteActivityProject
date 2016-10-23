@@ -1,0 +1,111 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        HTML5/CSS3超酷进度条
+    </title>
+    <style>
+        @import url("http://fonts.googleapis.com/css?family=Give+You+Glory|Exo:800");
+        * {
+            padding:0;
+            margin:0;
+        }
+        body {
+            font-family:'Exo',sans-serif;
+        }
+        .loader-container {
+            height:6px;
+            width:600px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-3px;
+            margin-left:-300px;
+            background-color:transparent;
+            background-image:-webkit-linear-gradient(left,#5bd8ff,#ff0000);
+            background-image:-moz-linear-gradient(left,#5bd8ff,#ff0000);
+            background-image:-o-linear-gradient(left,#5bd8ff,#ff0000);
+            background-image:-ms-linear-gradient(left,#5bd8ff,#ff0000);
+            background-image:linear-gradient(left,#5bd8ff,#ff0000);
+            box-shadow:inset
+            -2px 2px rgba(0,0,0,0.4);
+            border-radius:3px 0 0 3px;
+        }
+        .run .runner {
+            position:absolute;
+            right:0;
+            height:100%;
+            width:0%;
+            background-color:transparent;
+            background-image:-webkit-linear-gradient(top,#000000,#212121);
+            background-image:-moz-linear-gradient(top,#000000,#212121);
+            background-image:-o-linear-gradient(top,#000000,#212121);
+            background-image:-ms-linear-gradient(top,#000000,#212121);
+            background-image:linear-gradient(top,#000000,#212121);
+            animation:loader
+            10s linear;
+        }
+        .meter {
+            position:absolute;
+            top:0;
+            right:0;
+            font-size:2em;
+            margin-top:.3em;
+            color:#ff0000;
+            animation:meter 10s linear;
+            text-shadow:0
+            -1px 0 #333333;
+        }
+        .meter:after {
+            content:"%";
+        }
+        @keyframes loader {
+            0% {
+                width:100%;
+            }
+            100% {
+                width:0%;
+            }
+        }@keyframes meter {
+             0% {
+                 color:#5bd8ff;
+             }
+             100% {
+                 color:#ff0000;
+             }
+         }#wrapper {
+              width:600px;
+              margin:0 auto;
+          }
+
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <div class="loader-container">
+        <div class="meter">
+        </div>
+                <span class="runner">
+                </span>
+    </div>
+</div>
+<script>
+    (function() {
+        var loader = document.querySelectorAll('.loader-container')[0],
+                meter = document.querySelector('.meter'),
+                timer,
+                i = 1;
+        loader.classList.add('run');
+        timer = setInterval(function() {
+            if (i <= 100) {
+                meter.innerHTML = (i++) + '';
+            } else {
+                clearInterval(timer);
+            }
+        }, 100);
+    }) ();
+</script>
+</body>
+
+</html>

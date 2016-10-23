@@ -15,7 +15,7 @@
         body {
             font-family: sans-serif;
             background: #EEE;
-            width:7.5rem;
+            width:100%;
             overflow-x: hidden;
         }
         .grid {
@@ -29,10 +29,10 @@
         }
         /* ---- grid-item ---- */
         .grid-item,.grid-item--width2 {
-            width: 3.5rem;
+            width: 40%;
             height: auto;
             float: left;
-            border-radius: 5px;
+
         }
         .grid-item img{
             width: 100%;
@@ -66,27 +66,32 @@
 <body>
 
 <div class="grid">
-    <div class="grid-item"><img src="images2/111.jpg" /><p>书包书包</p> </div>
-    <div class="grid-item grid-item--width2"><img src="images2/222.jpg" /></div>
-    <div class="grid-item"><img src="images2/333.jpg" /></div>
+    <div class="grid-item"><img src="images2/111.jpg" /></div>
+    <div class="grid-item "><img src="images2/444.jpg" /></div>
+    <div class="grid-item"><img src="images2/444.jpg" /></div>
+    <div class="grid-item"><img src="images2/444.jpg" /></div>
+    <div class="grid-item"><img src="images2/444.jpg" /></div>
+    <div class="grid-item"><img src="images2/444.jpg" /></div>
+    <div class="grid-item "><img src="images2/111.jpg" /></div>
+    <div class="grid-item"><img src="images2/444.jpg" /></div>
     <div class="grid-item"><img src="images2/444.jpg" /></div>
     <div class="grid-item"><img src="images2/555.jpg" /></div>
     <div class="grid-item"><img src="images2/666.jpg" /></div>
-    <div class="grid-item grid-item--width2"><img src="images2/222.jpg" /></div>
-    <div class="grid-item"><img src="images2/333.jpg" /></div>
     <div class="grid-item"><img src="images2/444.jpg" /></div>
-    <div class="grid-item"><img src="images2/555.jpg" /></div>
-    <div class="grid-item"><img src="images2/666.jpg" /></div>
+    <div class="grid-item"><img src="images2/444.jpg" /></div>
 
 </div>
 <script>
     // external js: masonry.pkgd.js
 
-    $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: 20
-    });
 
+    var grid = $('#grid');
+    $grid.imagesLoaded(function() {
+        $grid.masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 10
+        })
+    })
 </script>
 </body>
 </html>
