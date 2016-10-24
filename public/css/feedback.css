@@ -1,0 +1,33 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#ff5075 !important;font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:16px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#fff!important; text-decoration:none; }
+img { border:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+
+.feedback-wrapper{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 37rem;
+    background: url(/images5/feedback-bg.jpg) center no-repeat;
+    background-size: 100%;
+    /*background-size: 375px 603px;*/
+}
+.feedback-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 76%;
+    /*transform: translate(-50%,-50%);*/
+    z-index: 9;
+    line-height: 25px;
+    color: #000;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
