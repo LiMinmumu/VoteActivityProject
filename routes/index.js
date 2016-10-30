@@ -52,4 +52,8 @@ router.get('/giftpackage',function(req,res,next){
 router.get('/bargin',function(req,res,next){
   res.render('bargin')
 });
+/*95回馈活动*/
+router.get("/feedback",function(req,res,next){
+  res.render("apple")
+});
 module.exports = router;

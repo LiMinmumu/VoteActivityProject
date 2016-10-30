@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>九五回馈</title>
+    <link rel="stylesheet" href="/css/feedback.css">
+</head>
+<body>
+<div class="feedback-wrapper">
+    <div class="feedback-content">
+        <div class="feedback-content-item clearfix">
+            <span class="feedback-label">上传照片</span>
+            <div class="feedback-content-right">
+                <span>点击上传图片</span>
+                <img src="/images5/feedback-upload.png" />
+            </div>
+        </div>
+        <!--<div class="feedback-content-item clearfix">-->
+            <!--<span class="feedback-label">上传照片</span>-->
+            <!--<div class="feedback-content-right">-->
+                <!--<img src="/images5/feedback-bg.jpg" class="feedback-uploadedimg" />-->
+                <!--<img src="/images5/feedback-close.png" />-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="feedback-content-item clearfix">
+            <span class="feedback-label">姓名</span>
+            <div class="feedback-content-right">
+                <input type="text" data-role="none" placeholder="请输入租赁人姓名" >
+            </div>
+        </div>
+        <div class="feedback-content-item clearfix">
+            <span class="feedback-label">收货地址</span>
+            <div class="feedback-content-right">
+                    <input type="text" data-role="none" placeholder="请输入收货地址" >
+            </div>
+        </div>
+        <div class="feedback-content-item clearfix">
+            <span class="feedback-label">手机号</span>
+            <div class="feedback-content-right">
+                <input type="number" data-role="none" placeholder="请输入手机号" >
+            </div>
+        </div>
+        <div class="feedback-content-item clearfix">
+            <span class="feedback-label">验证码</span>
+            <div class="feedback-content-right">
+                <input type="number" data-role="none" placeholder="请输入验证码" >
+                <button id="sendVerifyCode" data-role="none" class="gift-pakage-getcode">获取验证码</button>
+            </div>
+        </div>
+        <div class="feedback-content-item clearfix">
+            <span class="feedback-label">集赞数量</span>
+            <div class="feedback-content-right">
+                <input type="number" data-role="none" placeholder="请输入集赞数量" >
+            </div>
+        </div>
+        <div class="feedback-content-item clearfix last">
+            <button  data-role="none">确认领取</button>
+        </div>
+        <div class="feedback-desc">
+            <p>·本活动为九五集团回馈租赁老客户，仅限租赁用户参与；</p>
+            <p>·活动一切解释权归95来呗所有。</p>
+        </div>
+    </div>
+</div>
+<!--弹层-->
+<div class="laibeimask" style="display: none"></div>
+<div class="alertbox" style="display: none">
+    <h1>领取成功！</h1>
+    <p></p>
+    <input type="button" value="确认">
+</div>
+<script type="text/javascript">
+
+
+
+    //设置html fontSize
+(function (doc, win) {
+    var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+            };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+    //必须带上的
+    function InitPagebeforeCreate() {
+
+    }
+    function InitPageShow() {
+
+    }
+
+</script>
+</body>
+</html>
