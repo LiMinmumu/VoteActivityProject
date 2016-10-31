@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>九五视频</title>
+    <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="/css/video/videolist.css">
+</head>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    //设置html fontSize
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = (clientWidth / 7.5) + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+    //视频直接播放
+    function myFunction(obj) {
+        var xx = document.getElementById(obj);
+        xx.play();
+    }
+    //视频在暂停的时候切换为图片
+    function pauseFunction(imgSrc) {
+        $(".video-item").html(
+                "<img class='video-play' src='/images5/video-play.png'   /><img src='"+imgSrc+ "'/>"
+        )
+    }
+$(function(){
+    //每个图片在点击时切换为video
+    $(".video-item").each(function (index) {
+        $(this).on("tap click", function () {
+            var videoid = 'video' + index;
+            var imgSrc="/images5/video-cover.jpg";
+
+            $(this).html(
+                    "<video id='" + videoid + "' controls src='https://res.wx.qq.com/payactres/zh_CN/htmledition/images/mobile/man_night/guide/vedio.mp4' width='100%' onpause=\"pauseFunction('"+imgSrc+"')\"></video>"
+            );
+            console.log(imgSrc);
+            myFunction('video' + index);
+        });
+    })
+})
+
+
+</script>
+<body>
+<div class="list-box product toheader" id="articleDroploadDiv">
+    <div data-role="navbar" class="ui-navbar" role="navigation">
+        <ul class="navbar-ul ui-grid-solo" id="productChannels" style="">
+            <li class="ui-block-a"><a class="ui-link ui-btn ui-link-channel " data-key="G20_ArticleChannel_Rec"
+                                      data-id="2148" data-tagids="">推荐</a></li>
+            <li class="ui-block-a"><a class="ui-link ui-btn ui-link-channel " data-key="G20_ArticleChannel_Edu"
+                                      data-id="2149" data-tagids="31,32,33,34,35,36,37,38,43,44,45,48,49,50">教育</a></li>
+            <li class="ui-block-a"><a class="ui-link ui-btn ui-link-channel ui-btn-active"
+                                      data-key="G20_ArticleChannel_Grow" data-id="2150"
+                                      data-tagids="29,30,31,32,33">成长</a></li>
+            <li class="ui-block-a"><a class="ui-link ui-btn ui-link-channel " data-key="G20_ArticleChannel_Feed"
+                                      data-id="2151" data-tagids="29">喂养</a></li>
+            <li class="ui-block-a"><a class="ui-link ui-btn ui-link-channel " data-key="G20_ArticleChannel_Health"
+                                      data-id="2152" data-tagids="29,30,31,32,33">健康</a></li>
+            <li class="ui-block-a"><a class="ui-link ui-btn ui-link-channel " data-key="G20_ArticleChannel_Feel"
+                                      data-id="2153" data-tagids="29,30,31,32,33">情感</a></li>
+            <li class="ui-block-a"><a class="ui-link ui-btn ui-link-channel " data-key="G20_ArticleChannel_Pregnant"
+                                      data-id="2169" data-tagids="61,64">孕妈</a></li>
+        </ul>
+    </div>
+    <div class="searchbox" style="display:block;">
+        <a href="@Url.Action(" Vague","Search",new { Type = 3 })"><span class="iconfont">&#xe608;</span>来呗儿童安全座椅免费租赁</a>
+    </div>
+    <ul class="productitem qxtopspace videolist" id="articleList">
+
+        <li class="video">
+            <div class="video-item">
+                <img class="video-play" src="/images5/video-play.png"/>
+                <img src="/images5/video-cover.jpg"/>
+                <video style="display: none" id='" + videoid + "' controls src='https://res.wx.qq.com/payactres/zh_CN/htmledition/images/mobile/man_night/guide/vedio.mp4' width='100%' onpause=\"pauseFunction('" + imgSrc + "')\"></video>
+            </div>
+            <p class="video-desc">
+                预售抢购，仅限前200名儿童矢量素材预售抢购，仅限前200名儿童矢量素预售抢购，
+                仅限前200名儿童矢量素预售抢购，仅限前200名儿童矢量素
+            </p>
+            <span class="video-time">03:06</span>
+        </li>
+        <li class="video">
+            <div class="video-item">
+                <img class="video-play" src="/images5/video-play.png"/>
+                <img src="/images5/video-cover.jpg"/>
+            </div>
+            <p class="video-desc">
+                预售抢购，仅限前200名儿童矢量素材预售抢购，仅限前200名儿童矢量素预售抢购，
+                仅限前200名儿童矢量素预售抢购，仅限前200名儿童矢量素
+            </p>
+            <span class="video-time">03:06</span>
+        </li>
+        <li class="video">
+            <div class="video-item">
+                <img class="video-play" src="/images5/video-play.png"/>
+                <img src="/images5/video-cover.jpg"/>
+            </div>
+            <p class="video-desc">
+                预售抢购，仅限前200名儿童矢量素材预售抢购，仅限前200名儿童矢量素预售抢购，
+                仅限前200名儿童矢量素预售抢购，仅限前200名儿童矢量素
+            </p>
+            <span class="video-time">03:06</span>
+        </li>
+    </ul>
+</div>
+
+<!-- 回到顶部 -->
+<!--@Html.Partial("/Views/Shared/_Gotop.cshtml")-->
+
+</body>

@@ -10,8 +10,8 @@ input, textarea, select, button { font-family:'Microsoft YaHei', Arial, Helvetic
 
 .feedback-wrapper{
     position: relative;
-    top: 0;
-    left: 0;
+    /*top: 0;*/
+    /*left: 0;*/
     height: 12rem;
     background: url(/images5/feedback-bg.jpg) center no-repeat;
     background-size: 100%;

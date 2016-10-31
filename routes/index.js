@@ -56,4 +56,11 @@ router.get('/bargin',function(req,res,next){
 router.get("/feedback",function(req,res,next){
   res.render("apple")
 });
+/*95视频列表*/
+router.get("/video",function(req,res,next){
+  res.render("video")
+});
+router.get("/video2",function(req,res,next){
+  res.render("video2")
+});
 module.exports = router;

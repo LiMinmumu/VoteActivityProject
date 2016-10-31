@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Simple JavaScript Controller</title>
+
+    <script type="text/javascript">
+
+        function playPause() {
+            var myVideo = document.getElementsByTagName('video')[0];
+            if (myVideo.paused){
+                myVideo.play();
+            }
+            else{
+                myVideo.pause();
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="video-player" align="center">
+
+    <video src="https://res.wx.qq.com/payactres/zh_CN/htmledition/images/mobile/man_night/guide/vedio.mp4" poster="/images5/video-cover.jpg" onclick="playPause()" ></video>
+
+</div>
+
+</body>
+
+</html>
