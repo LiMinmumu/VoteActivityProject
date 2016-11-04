@@ -63,4 +63,11 @@ router.get("/video",function(req,res,next){
 router.get("/video2",function(req,res,next){
   res.render("video2")
 });
+router.get("/video3",function(req,res,next){
+  res.render("video3")
+});
+/*拼团活动*/
+router.get("/group",function(req,res,next){
+  res.render("group")
+});
 module.exports = router;

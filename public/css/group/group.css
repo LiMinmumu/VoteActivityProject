@@ -1,0 +1,125 @@
+.group-fixedheader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 22;
+    height: 1rem;
+    line-height: 1rem;
+    background: #fbfbfb;
+    text-align: center;
+}
+.group-fixedheader>div:first-child{
+    width:20%;
+    color: #0080fc;
+    position: fixed;
+}
+.group-fixedheader>div:first-child a{
+    width: 90px;
+    display: block;
+    height: 1rem;
+    color:#0080fc;
+}
+.group-fixedheader>div:first-child i{
+    font-style: normal;
+    font-size: 24px;
+}
+.group-fixedheader>div:first-child i,.group-fixedheader>div:first-child span{
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+}
+.group-fixedheader>div:first-child span{
+    position: relative;
+    left: -5px;
+    top: -2px;
+    font-size: 17px;
+}
+.group-fixedheader h1{
+    width: 100%;
+    font-size: 17px;
+    color:#000;
+    text-align: center;
+}
+.group-main{
+    height: 1rem;
+    width: 100%;
+    margin-top: 1.02rem;
+    background: #fff;
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    display: -webkit-flex;
+}
+.group-main a{
+    display: inline-block;
+    width: 36%;
+    margin: 0 7% 0 10%;;
+    font-size: 15px;
+    line-height: 1rem;
+    text-align: center;
+}
+.group-main a:last-child{
+    margin: 0 10% 0 7%;
+}
+.group-selected{
+    color:#ff3565 !important;
+    border-bottom: 2px solid #ff3565;
+}
+.group-order-item{
+    margin: .2rem auto;
+    /*padding: .2rem .2rem 0;*/
+    background: #fff;
+}
+.group-order-firstline>div:first-child{
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+.group-product-desc{
+    display: inline-block;
+    position: relative;
+    top:.6rem;
+    left: -.3rem;
+    width: 50%;
+    font-size: 13px;
+    line-height: 2;
+}
+.group-product-desc span{
+    font-size: 14px;
+    color:#f21156;
+}
+.group-order-firstline>div img:first-child{
+    width: 95%;
+}
+.group-order-secondline{
+    height: 1rem;
+    padding: .2rem 0;
+    width:100%;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+.group-order-secondline>div{
+    display: inline-block;
+    height: 1rem;
+}
+.group-order-secondline>div:first-child{
+    width:45%;
+    padding-left: .2rem;
+}
+.group-order-secondline>div:last-child{
+    position: relative;
+    top:-.4rem;
+    line-height: 1rem;
+}
+.group-order-secondline>div:last-child p{
+   font-size: 14px;
+    color:#ff3565;
+}
+.group-order-secondline img{
+    width:1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+.group-order-secondline p{
+    display: inline-block;
+}

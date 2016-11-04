@@ -31,25 +31,28 @@
     //视频直接播放
     function myFunction(obj) {
         var xx = document.getElementById(obj);
+        //xx.currentTime=900;
+       // video.currentTime = 0
         xx.play();
     }
     //视频在暂停的时候切换为图片
     function pauseFunction(imgSrc) {
+       // console.log(video.currentTime);
         $(".video-item").html(
                 "<img class='video-play' src='/images5/video-play.png'   /><img src='"+imgSrc+ "'/>"
         )
     }
 $(function(){
     //每个图片在点击时切换为video
-    $(".video-item").each(function (index) {
+    $(".video-play").each(function (index) {
         $(this).on("tap click", function () {
             var videoid = 'video' + index;
             var imgSrc="/images5/video-cover.jpg";
 
-            $(this).html(
+            $(this).parent().html(
                     "<video id='" + videoid + "' controls src='https://res.wx.qq.com/payactres/zh_CN/htmledition/images/mobile/man_night/guide/vedio.mp4' width='100%' onpause=\"pauseFunction('"+imgSrc+"')\"></video>"
+                  // "<video id='" + videoid + "' controls src='https://res.wx.qq.com/payactres/zh_CN/htmledition/images/mobile/man_night/guide/vedio.mp4' width='100%' ></video>"
             );
-            console.log(imgSrc);
             myFunction('video' + index);
         });
     })
